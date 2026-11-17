@@ -98,7 +98,7 @@ html{overflow-x:clip}.opening{position:fixed;inset:0;z-index:100;background:#9f2
 </style>
 <a class="skip" href="#main">Skip to content</a><div aria-hidden="true" class="progress"></div>
 <header class="top" id="top"><a class="brand" href="#top" aria-label="Ssajin Studio home">ssajin<i>studio.</i></a><nav aria-label="Main navigation" class="meta"><a href="#work">Work</a><a href="#services">Services</a><a class="nav-archive" href="#archive">Archive</a></nav><a class="pill meta" href="#contact">Contact <span aria-hidden="true">↗</span></a></header>
-<div class="opening" aria-hidden="true"><strong>ssajin.</strong><div class="opening-line"></div><small>EXPERIENCES IN MOTION</small></div><main id="main">
+<div class="opening" aria-hidden="true"><strong>ssajin.</strong><div class="opening-line"></div><small>EXPERIENCES IN MOTION</small></div><button class="motion-switch meta" type="button">Enable full motion</button><main id="main">
 <section class="hero" aria-labelledby="headline"><div class="intro"><div class="kicker meta">Independent development studio</div><h1 id="headline"><span class="mask"><span>Digital built</span></span><span class="mask"><span><em>to move.</em></span></span></h1><p>Custom websites, online stores and apps, designed around how your business works.</p><a class="pill meta" href="#work">Explore the work <span aria-hidden="true">↘</span></a></div>
 <figure class="heroArt"><img src="assets/photo-01.jpg" width="512" height="683" fetchpriority="high" decoding="async" alt="A couple caught in motion beneath a chandelier"><figcaption class="photo-note meta"><span>Photography by Ssajin Studio</span><span>Film 01</span></figcaption></figure><span class="stamp" aria-hidden="true">✳</span>
 <div class="herofoot meta"><span>Design &amp; full-stack development</span><a href="#work">Scroll to explore <span class="scrollarrow" aria-hidden="true">↓</span></a></div></section>
@@ -148,7 +148,7 @@ html{overflow-x:clip}.opening{position:fixed;inset:0;z-index:100;background:#9f2
 const $ = selector => document.querySelector(selector);
 const $$ = selector => [...document.querySelectorAll(selector)];
 const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
-const reduce = matchMedia('(prefers-reduced-motion: reduce)');
+const reduce = matchMedia(sessionStorage.getItem('ssajin-motion')==='full'?'(max-width: 0px)':'(prefers-reduced-motion: reduce)');
 const desktop = matchMedia('(min-width: 851px) and (min-height: 650px)');
 const work = $('.work');
 const track = $('.track');
@@ -246,7 +246,7 @@ measure();
     const frame = viewer.querySelector('figure');
     const count = viewer.querySelector('.viewer-count');
     const source = viewer.querySelector('.viewer-source');
-    const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+    const reduced = matchMedia(sessionStorage.getItem('ssajin-motion')==='full'?'(max-width: 0px)':'(prefers-reduced-motion: reduce)');
     let selected = 0;
     let opener;
     let startX;
@@ -298,7 +298,7 @@ measure();
 }
 </script><script>
 {
-const reduced=matchMedia('(prefers-reduced-motion: reduce)');
+const reduced=matchMedia(sessionStorage.getItem('ssajin-motion')==='full'?'(max-width: 0px)':'(prefers-reduced-motion: reduce)');
 const film=document.querySelector('.motion-film'),strip=document.querySelector('.film-strip');
 const headings=[...document.querySelectorAll('.section-title,.footerbody h2')];
 const tiles=[...document.querySelectorAll('.archive-grid a')];
@@ -324,5 +324,13 @@ document.documentElement.classList.add('motion-on');
 addEventListener('scroll',schedule,{passive:true});addEventListener('resize',schedule);
 reduced.addEventListener('change',()=>{if(reduced.matches){[strip,...headings,...serviceRows,...tiles,heroTitle,document.querySelector('.film-title')].forEach(e=>{e.style.transform='';e.style.translate='';e.style.rotate='';e.style.opacity='';});}else schedule()});
 schedule();
+}
+</script><style>.motion-switch{position:fixed;right:18px;bottom:18px;z-index:40;border:1px solid #f3ede3;background:#9f2029;color:#fff;padding:13px 18px;border-radius:50px}.film-strip{scrollbar-width:none}.film-strip::-webkit-scrollbar{display:none}</style><script>
+const motionSwitch=document.querySelector('.motion-switch');
+motionSwitch.textContent=sessionStorage.getItem('ssajin-motion')==='full'?'Reduce motion':'Enable full motion';
+motionSwitch.addEventListener('click',()=>{sessionStorage.setItem('ssajin-motion',sessionStorage.getItem('ssajin-motion')==='full'?'reduced':'full');location.reload()});
+if(sessionStorage.getItem('ssajin-motion')==='full'){
+ for(const sheet of document.styleSheets){for(const rule of sheet.cssRules){if(rule.type===CSSRule.MEDIA_RULE&&rule.conditionText.includes('prefers-reduced-motion:reduce'))rule.media.mediaText='(max-width:0px)';if(rule.type===CSSRule.MEDIA_RULE&&rule.conditionText.includes('prefers-reduced-motion:no-preference'))rule.media.mediaText='all';}}
+ measure();
 }
 </script></html>
