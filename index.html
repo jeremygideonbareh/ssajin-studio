@@ -88,10 +88,17 @@ body:has(.gallery-viewer[open]){overflow:hidden}
   .viewer-count,.viewer-source{font-size:10px;letter-spacing:.07em}
   .archive-grid a:after{display:none}
 }
+</style><style>
+html{overflow-x:clip}.opening{position:fixed;inset:0;z-index:100;background:#9f2029;color:#f3ede3;display:grid;place-content:center;text-align:center;pointer-events:none;animation:curtain 1.9s cubic-bezier(.76,0,.24,1) forwards}.opening strong{font:italic clamp(70px,16vw,240px)/1 Georgia;letter-spacing:-.08em;animation:opening-type 1.2s both}.opening small{font:11px Consolas;letter-spacing:.35em}.opening-line{height:1px;background:#f3ede3;margin:30px 0;transform-origin:left;animation:opening-line 1.1s both}
+@keyframes curtain{0%,62%{transform:translateY(0)}100%{transform:translateY(-101%);visibility:hidden}}@keyframes opening-type{from{opacity:0;transform:translateY(65px) rotate(4deg)}to{opacity:1;transform:none}}@keyframes opening-line{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.intro .mask span{animation-delay:1.4s!important}.intro .mask:nth-child(2) span{animation-delay:1.55s!important}.heroArt{animation-delay:1.1s!important}
+.motion-film{height:260svh;background:#201a17;color:#f3ede3;position:relative}.film-pin{position:sticky;top:0;height:100svh;overflow:hidden;display:flex;align-items:center}.film-title{position:absolute;top:8%;left:var(--pad);font:italic clamp(65px,12vw,170px)/.9 Georgia;letter-spacing:-.07em;z-index:2;pointer-events:none}.film-strip{display:flex;gap:4vw;padding:0 12vw;will-change:transform}.film-strip img{width:42vw;height:65svh;object-fit:cover;flex:none;transform:rotate(var(--angle));box-shadow:0 20px 70px #0007}.film-caption{position:absolute;bottom:4%;left:var(--pad)}.services .section-title,.archive .section-title,.footerbody h2{animation:none!important}.archive-grid a{will-change:transform}.motion-on .hero .intro{animation:none}.motion-on .section-title .kinetic{animation:none}.motion-on .services details summary{animation:none}
+@media(max-width:620px){.film-strip img{width:74vw;height:56svh}.film-title{top:10%;font-size:17vw}.motion-film{height:230svh}}
+@media(prefers-reduced-motion:reduce){.opening{display:none}.motion-film{height:auto}.film-pin{position:relative;height:auto;min-height:75svh;padding:130px 0 80px}.film-strip{overflow:auto;width:100%;transform:none!important}.film-strip img{transform:none}.film-title{font-size:45px}}
 </style>
 <a class="skip" href="#main">Skip to content</a><div aria-hidden="true" class="progress"></div>
 <header class="top" id="top"><a class="brand" href="#top" aria-label="Ssajin Studio home">ssajin<i>studio.</i></a><nav aria-label="Main navigation" class="meta"><a href="#work">Work</a><a href="#services">Services</a><a class="nav-archive" href="#archive">Archive</a></nav><a class="pill meta" href="#contact">Contact <span aria-hidden="true">↗</span></a></header>
-<main id="main">
+<div class="opening" aria-hidden="true"><strong>ssajin.</strong><div class="opening-line"></div><small>EXPERIENCES IN MOTION</small></div><main id="main">
 <section class="hero" aria-labelledby="headline"><div class="intro"><div class="kicker meta">Independent development studio</div><h1 id="headline"><span class="mask"><span>Digital built</span></span><span class="mask"><span><em>to move.</em></span></span></h1><p>Custom websites, online stores and apps, designed around how your business works.</p><a class="pill meta" href="#work">Explore the work <span aria-hidden="true">↘</span></a></div>
 <figure class="heroArt"><img src="assets/photo-01.jpg" width="512" height="683" fetchpriority="high" decoding="async" alt="A couple caught in motion beneath a chandelier"><figcaption class="photo-note meta"><span>Photography by Ssajin Studio</span><span>Film 01</span></figcaption></figure><span class="stamp" aria-hidden="true">✳</span>
 <div class="herofoot meta"><span>Design &amp; full-stack development</span><a href="#work">Scroll to explore <span class="scrollarrow" aria-hidden="true">↓</span></a></div></section>
@@ -102,7 +109,7 @@ body:has(.gallery-viewer[open]){overflow:hidden}
 <figure class="concept"><div class="visual"><img src="assets/photo-04.jpg" width="512" height="683" loading="lazy" alt="Wedding details and white flowers in directional light"><span class="concept-type">The online<br>store</span></div><figcaption class="meta"><span>02 / Commerce concept</span><span>Independent brands</span></figcaption></figure>
 <figure class="concept"><div class="visual"><img src="assets/photo-03.jpg" width="512" height="683" loading="lazy" alt="Two wedding portraits in a green landscape"><span class="concept-type">The client<br>portal</span></div><figcaption class="meta"><span>03 / App concept</span><span>Service businesses</span></figcaption></figure>
 </div><div class="railfoot"><span class="meta railcount" aria-hidden="true">01 / 03</span><div class="meter" aria-hidden="true"><span></span></div><div class="railbuttons"><button type="button" aria-label="Previous concept">←</button><button type="button" aria-label="Next concept">→</button></div></div></div></section>
-<section class="services" id="services"><div class="meta reveal">What we build</div><h2 class="section-title reveal">Built around <em class="kinetic">you.</em></h2><div class="servicegrid"><p class="reveal">One studio for the design, the code and the systems behind your website or app.</p><div class="reveal">
+<section class="motion-film" aria-label="Photography in motion"><div class="film-pin"><h2 class="film-title">A different<br>perspective.</h2><div class="film-strip"><img src="assets/photo-06.jpg" alt="Ssajin Studio wedding photography" loading="lazy" style="--angle:-5deg"><img src="assets/photo-10.jpg" alt="Ssajin Studio wedding photography" loading="lazy" style="--angle:5deg"><img src="assets/photo-14.jpg" alt="Ssajin Studio wedding photography" loading="lazy" style="--angle:-5deg"><img src="assets/photo-18.jpg" alt="Ssajin Studio wedding photography" loading="lazy" style="--angle:5deg"><img src="assets/photo-22.jpg" alt="Ssajin Studio wedding photography" loading="lazy" style="--angle:-5deg"></div><span class="film-caption meta">Photography by Ssajin Studio · Keep scrolling ↓</span></div></section><section class="services" id="services"><div class="meta reveal">What we build</div><h2 class="section-title reveal">Built around <em class="kinetic">you.</em></h2><div class="servicegrid"><p class="reveal">One studio for the design, the code and the systems behind your website or app.</p><div class="reveal">
 <details open><summary><small class="meta">01</small> Websites &amp; portfolios</summary><p>Custom business sites and portfolios with clear navigation, responsive layouts and content you can update yourself.</p></details>
 <details><summary><small class="meta">02</small> Online stores</summary><p>Storefronts with product pages, checkout and order management for how you sell and ship.</p></details>
 <details><summary><small class="meta">03</small> Apps &amp; portals</summary><p>Web and mobile apps with accounts, dashboards, integrations and the backend to support them.</p></details>
@@ -288,5 +295,34 @@ measure();
       display(selected + direction, direction);
     }, {passive:true});
   }
+}
+</script><script>
+{
+const reduced=matchMedia('(prefers-reduced-motion: reduce)');
+const film=document.querySelector('.motion-film'),strip=document.querySelector('.film-strip');
+const headings=[...document.querySelectorAll('.section-title,.footerbody h2')];
+const tiles=[...document.querySelectorAll('.archive-grid a')];
+const heroTitle=document.querySelector('.intro');
+const serviceRows=[...document.querySelectorAll('.services details')];
+const clamp=x=>Math.max(0,Math.min(1,x));
+let pending=false;
+function draw(){
+ pending=false;
+ if(reduced.matches)return;
+ const h=innerHeight;
+ const r=film.getBoundingClientRect();
+ const p=clamp(-r.top/(film.offsetHeight-h));
+ strip.style.transform='translate3d('+(-p*Math.max(0,strip.scrollWidth-innerWidth))+'px,0,0)';
+ document.querySelector('.film-title').style.transform='translateX('+(-p*110)+'px)';
+ headings.forEach(el=>{const r=el.getBoundingClientRect();const p=clamp((h-r.top)/(h*.8));el.style.transform='translateY('+((1-p)*85)+'px) rotate('+((1-p)*3)+'deg)';el.style.opacity=.2+.8*p;});
+ serviceRows.forEach((el,i)=>{const r=el.getBoundingClientRect();const p=clamp((h-r.top)/(h*.45));el.style.transform='translateX('+((1-p)*(i%2?100:-100))+'px)';el.style.opacity=.15+.85*p;});
+ tiles.forEach((el,i)=>{const r=el.getBoundingClientRect();if(r.top>h+150||r.bottom< -150)return;const p=clamp((h-r.top)/(h*.6));el.style.translate='0 '+((1-p)*110)+'px';el.style.rotate=((1-p)*(i%2?8:-8))+'deg';});
+ if(scrollY<h)heroTitle.style.translate=(-scrollY*.08)+'px '+(-scrollY*.12)+'px';
+}
+function schedule(){if(!pending){pending=true;requestAnimationFrame(draw)}}
+document.documentElement.classList.add('motion-on');
+addEventListener('scroll',schedule,{passive:true});addEventListener('resize',schedule);
+reduced.addEventListener('change',()=>{if(reduced.matches){[strip,...headings,...serviceRows,...tiles,heroTitle,document.querySelector('.film-title')].forEach(e=>{e.style.transform='';e.style.translate='';e.style.rotate='';e.style.opacity='';});}else schedule()});
+schedule();
 }
 </script></html>
