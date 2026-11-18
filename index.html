@@ -1,403 +1,125 @@
 <!doctype html>
-<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Ssajin Studio — Digital experiences in motion</title>
-<meta name="description" content="Independent full-stack development for websites, online stores, portfolios and apps.">
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#e9e9e5"><meta name="description" content="Ssajin Studio — documentary wedding and event photography by Kekhriezalie Keretsu."><title>Ssajin Studio — Stories, honestly told.</title><style>
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(assets/display-0.woff2) format('truetype');
+}
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(assets/display-1.woff2) format('truetype');
+}
+
+:root{--paper:#e9e9e5;--ink:#141514;--muted:#656661;--line:#bfc0b9;--accent:#b34c41;--pad:clamp(22px,5vw,90px);--display:'Barlow Condensed','Arial Narrow',Impact,sans-serif}
+*{box-sizing:border-box}html{overflow-x:clip;scroll-behavior:smooth;scroll-padding-top:95px}body{margin:0;background:var(--paper);color:var(--ink);font:14px/1.6 Arial,sans-serif;overflow-x:clip}body.locked{overflow:hidden}a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;cursor:pointer}button,a{-webkit-tap-highlight-color:transparent}button:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:6px}img{display:block;width:100%;height:100%;object-fit:cover}h1,h2,h3,p,figure{margin:0}h1,h2,h3{font-family:var(--display);text-transform:uppercase;font-weight:800;line-height:.86;letter-spacing:-.035em}.micro{font-size:10px;letter-spacing:.18em;text-transform:uppercase}.skip{position:fixed;top:-100px;z-index:200;background:var(--paper);padding:15px}.skip:focus{top:0}.topbar{height:94px;position:absolute;inset:0 0 auto;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:0 var(--pad)}.logo{display:flex;align-items:center;gap:13px;line-height:1}.logo-mark{width:48px;height:48px;border-radius:50%;background:var(--ink);color:var(--paper);display:grid;place-items:center;font:800 26px var(--display);letter-spacing:-.1em}.logo-name{font:700 17px/.92 var(--display);letter-spacing:.02em}.topbar nav{display:flex;gap:34px;align-items:center}.nav-link{padding:15px 0;position:relative}.nav-link:after{content:'';position:absolute;bottom:7px;left:0;width:100%;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .3s}.nav-link:hover:after{transform:scaleX(1)}.menu-toggle{display:none;background:none;border:0;min-height:44px}.opening{position:fixed;inset:0;background:var(--ink);color:var(--paper);z-index:100;display:grid;place-content:center;text-align:center;pointer-events:none;animation:curtain 1.8s cubic-bezier(.76,0,.24,1) forwards}.opening strong{font:800 clamp(70px,13vw,190px)/.8 var(--display);letter-spacing:-.04em}.opening span{margin-top:30px}.opening-line{height:1px;margin-top:22px;background:var(--paper);animation:loadline 1s ease both;transform-origin:left}@keyframes curtain{0%,60%{transform:none}100%{transform:translateY(-101%);visibility:hidden}}@keyframes loadline{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.hero{min-height:100svh;position:relative;padding:150px var(--pad) 45px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:2vw}.hero-copy{z-index:2;position:relative}.eyebrow{margin-bottom:24px;color:var(--muted)}.hero h1{font-size:clamp(96px,15vw,240px);line-height:.78}.hero h1 span{display:block}.hero h1 .outline{-webkit-text-stroke:1.4px var(--ink);color:transparent}.hero-quote{margin:33px 0 30px;max-width:32ch;font-size:13px;line-height:1.7;letter-spacing:.12em;text-transform:uppercase}.text-link{display:inline-flex;gap:30px;align-items:center;padding:12px 0;border-bottom:1px solid;font-size:11px;letter-spacing:.13em;text-transform:uppercase}.text-link span{font-size:23px;transition:transform .4s}.text-link:hover span{transform:translate(5px,-5px)}.lens-wrap{width:min(45vw,690px);aspect-ratio:1;position:relative;justify-self:center}.lens{position:absolute;inset:9%;border-radius:50%;overflow:hidden;background:#c8c8c0}.lens img{filter:grayscale(1);object-position:50% 38%;scale:1.07;transition:filter .8s}.lens-wrap:hover img{filter:grayscale(0)}.lens-ring{position:absolute;inset:0;border:1px solid #7d7e76;border-radius:50%}.lens-ring:before{content:'';position:absolute;inset:3%;border:1px dashed #9a9b93;border-radius:50%;animation:orbit 90s linear infinite}.lens-ring:after{content:'';position:absolute;inset:6%;border:1px solid #9a9b93;border-radius:50%}.lens-label{position:absolute;bottom:0;right:0;font-size:9px;letter-spacing:.2em;background:var(--paper);padding:8px}.orbit-dot{position:absolute;inset:0;animation:orbit 25s linear infinite}.orbit-dot:after{content:'';position:absolute;left:50%;top:-5px;width:10px;height:10px;background:var(--accent);border-radius:50%}@keyframes orbit{to{rotate:360deg}}.hero-bottom{grid-column:1/-1;display:flex;justify-content:space-between;align-self:end;padding-top:35px;color:var(--muted)}.hero-bottom a{min-height:44px;display:flex;align-items:center}
+.intro{padding:clamp(80px,11vw,180px) var(--pad);border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 2fr;gap:40px}.intro-label{max-width:17ch}.intro h2{font-size:clamp(48px,6.8vw,108px);line-height:.98}.intro h2 .soft{color:#999b92}.intro-bottom{margin-top:35px;display:grid;grid-template-columns:1fr 1fr;gap:35px}.intro-bottom p{max-width:34ch;color:var(--muted)}.signature{font-family:Georgia,serif;font-style:italic;font-size:28px;line-height:1.2}
+.stories{background:#151615;color:#ecece6}.stories-pin{padding:65px 0 35px;overflow:hidden}.section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin:0 var(--pad) 35px}.section-head h2{font-size:clamp(58px,8vw,120px)}.section-head p{max-width:24ch;color:#a9aaa3}.story-track{display:flex;gap:5vw;padding:0 var(--pad);width:100%;overflow:auto;scroll-snap-type:x mandatory;scrollbar-width:none}.story{flex:0 0 64vw;scroll-snap-align:center;min-width:0}.story:nth-child(even){flex-basis:40vw}.story-photo{height:56svh;overflow:hidden;display:block;width:100%;padding:0;border:0;background:#343630;position:relative}.story-photo img{transition:transform 1s;filter:saturate(.75)}.story-photo:hover img{transform:scale(1.05)}.story-photo:after{content:'VIEW PHOTOGRAPH ↗';position:absolute;bottom:20px;left:22px;font-size:10px;letter-spacing:.15em;color:white;text-shadow:0 1px 6px #000}.story figcaption{display:flex;justify-content:space-between;align-items:center;gap:15px;padding:18px 0 0}.story h3{font-size:35px;letter-spacing:-.02em}.story-meta{color:#a9aaa3}.story-controls{margin:28px var(--pad) 0;display:flex;gap:10px;align-items:center}.round{height:46px;width:46px;border:1px solid currentColor;border-radius:50%;background:transparent;font-size:20px}.round:hover{background:var(--paper);color:var(--ink)}.story-progress{height:1px;background:#55574f;flex:1;margin-right:22px}.story-progress span{display:block;width:100%;height:1px;background:#eee;transform:scaleX(.05);transform-origin:left}
+.vision{padding:150px var(--pad);display:grid;grid-template-columns:1fr 1fr;gap:10vw;align-items:center}.vision-photos{height:650px;position:relative}.vision-photos .large{position:absolute;width:77%;height:88%;left:0;top:0;overflow:hidden}.vision-photos .small{position:absolute;width:49%;height:46%;bottom:0;right:0;border:9px solid var(--paper);overflow:hidden}.vision h2{font-size:clamp(58px,8vw,120px);margin:26px 0 33px}.vision p{color:var(--muted);max-width:37ch;margin-bottom:30px}.vision .micro{color:var(--ink)}.line-word{display:block}.image-break{height:82svh;overflow:hidden;position:relative}.image-break img{object-position:50% 42%;filter:grayscale(1)}.image-break h2{position:absolute;inset:0;display:grid;place-content:center;text-align:center;font-size:clamp(65px,13vw,190px);color:white;text-shadow:0 2px 30px #0006;pointer-events:none}.image-break:after{content:'';position:absolute;inset:0;background:#0002;pointer-events:none}
+.archive{padding:120px var(--pad)}.archive .section-head{margin:0 0 50px}.archive .section-head p{color:var(--muted)}.photo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:35px 18px}.photo-item{margin:0}.photo-item:nth-child(4n+2){padding-top:80px}.photo-item:nth-child(4n){padding-top:40px}.photo-button{background:#d5d6d0;border:0;padding:0;display:block;width:100%;aspect-ratio:3/4;overflow:hidden;cursor:zoom-in}.photo-button img{transition:transform .75s,filter .75s;filter:grayscale(.35)}.photo-button:hover img{transform:scale(1.07);filter:none}.photo-item figcaption{padding-top:11px;color:var(--muted);font-size:9px;letter-spacing:.15em}.contact{background:#dcded6;padding:110px var(--pad) 30px;position:relative;overflow:hidden}.contact .micro{margin-bottom:25px}.contact h2{font-size:clamp(80px,14vw,210px);max-width:9ch}.contact-main{display:flex;justify-content:space-between;align-items:end;gap:30px}.contact-main .text-link{margin-bottom:10px}.footer-line{border-top:1px solid #a5a79d;margin-top:80px;padding-top:22px;display:flex;justify-content:space-between;gap:20px}.motion-toggle{position:fixed;bottom:14px;left:14px;z-index:25;border:1px solid #aaa;background:#e9e9e5ed;padding:9px 12px;font-size:9px;letter-spacing:.12em;text-transform:uppercase}.cursor-label{position:fixed;width:75px;height:75px;border:1px solid #fff9;border-radius:50%;display:grid;place-items:center;background:#14151480;color:white;font-size:9px;letter-spacing:.15em;pointer-events:none;z-index:50;opacity:0;transition:opacity .2s;left:0;top:0}
+dialog{border:0;margin:0;padding:20px 4vw;max-width:none;max-height:none;width:100%;height:100%;background:#111;color:#eee}dialog[open]{display:grid;grid-template-rows:auto minmax(0,1fr) auto;gap:20px}dialog::backdrop{background:#111}.viewer-top,.viewer-bottom{display:flex;justify-content:space-between;align-items:center;gap:15px}.viewer-frame{height:100%;min-height:0;display:grid;place-items:center;touch-action:pan-y}.viewer-frame img{width:100%;height:100%;object-fit:contain}.viewer-bottom a{padding:10px}.viewer-nav{display:flex;gap:10px}.dialog-close{background:none;border:0;color:inherit;font-size:28px;min-width:44px;min-height:44px}.menu-panel{position:fixed;inset:0;z-index:80;background:var(--paper);padding:100px var(--pad) 35px;display:none}.menu-panel.open{display:flex;flex-direction:column;justify-content:center;gap:20px}.menu-panel a{font:800 64px/.95 var(--display);text-transform:uppercase}.menu-close{position:absolute;right:20px;top:20px;border:0;background:none;font-size:28px;min-height:44px;min-width:44px}
+html[data-motion="reduced"] *,html[data-motion="reduced"] *:before,html[data-motion="reduced"] *:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}html[data-motion="reduced"] .opening{display:none}
+@media(min-width:1800px){.hero{max-width:1900px;margin:auto}.vision{max-width:1800px;margin:auto}}
+@media(max-width:850px){.hero{padding-top:130px}.hero h1{font-size:16vw}.hero-quote{font-size:11px}.intro{grid-template-columns:1fr;gap:25px}.intro-label{max-width:none}.vision{gap:5vw;padding:100px var(--pad)}.vision-photos{height:480px}.photo-grid{grid-template-columns:repeat(3,1fr)}.photo-item:nth-child(n){padding-top:0}.photo-item:nth-child(3n+2){padding-top:55px}}
+@media(max-width:620px){.topbar{height:78px}.logo-name{font-size:15px}.logo-mark{width:40px;height:40px}.topbar nav{display:none}.menu-toggle{display:block}.hero{grid-template-columns:1fr;padding-top:115px;gap:20px;min-height:100svh}.hero h1{font-size:26vw;line-height:.8}.hero-copy{pointer-events:none}.hero-copy a{pointer-events:auto}.eyebrow{font-size:9px;margin-bottom:20px}.hero-quote{margin:23px 0 10px;max-width:32ch}.lens-wrap{width:78vw;max-width:370px;justify-self:end;margin-top:0;margin-right:0}.hero-bottom{font-size:8px;padding-top:8px;gap:10px}.intro{padding:75px var(--pad)}.intro h2{font-size:14vw}.intro-bottom{grid-template-columns:1fr;gap:24px}.section-head{align-items:start;flex-direction:column;margin-bottom:25px}.section-head h2{font-size:17vw}.section-head p{font-size:12px;max-width:30ch}.stories-pin{padding:65px 0 30px}.story,.story:nth-child(even){flex-basis:82vw}.story-photo{height:49svh}.story h3{font-size:28px}.story figcaption{align-items:start}.story-meta{font-size:8px;max-width:14ch}.vision{grid-template-columns:1fr;padding:75px var(--pad);gap:50px}.vision-photos{height:110vw;max-height:560px}.vision h2{font-size:20vw}.image-break{height:65svh}.image-break h2{font-size:20vw}.archive{padding:75px var(--pad)}.archive .section-head{margin-bottom:30px}.photo-grid{grid-template-columns:1fr 1fr;gap:25px 12px}.photo-item:nth-child(n){padding-top:0}.photo-item:nth-child(even){padding-top:40px}.contact{padding:75px var(--pad) 65px}.contact-main{display:block}.contact h2{font-size:23vw}.contact-main .text-link{margin-top:32px}.footer-line{font-size:8px;flex-wrap:wrap;margin-top:50px}.viewer-bottom{font-size:9px}.cursor-label{display:none}.motion-toggle{bottom:8px;left:8px}.photo-button{min-height:140px}}
+</style></head><body>
+<a class="skip" href="#main">Skip to photographs</a>
+<div class="opening" aria-hidden="true"><strong>SSAJIN<br>STUDIO</strong><span class="micro">Stories, honestly told.</span><div class="opening-line"></div></div>
+<header class="topbar"><a class="logo" href="#top" aria-label="Ssajin Studio home"><span class="logo-mark">S.</span><span class="logo-name">SSAJIN<br>STUDIO</span></a><nav aria-label="Main"><a class="nav-link micro" href="#stories">Selected stories</a><a class="nav-link micro" href="#vision">Our approach</a><a class="nav-link micro" href="#archive">Photographs</a><a class="nav-link micro" href="#contact">Get in touch ↗</a></nav><button class="menu-toggle micro" aria-expanded="false" aria-controls="menu-panel">Menu ☰</button></header>
+<div id="menu-panel" class="menu-panel" inert><button class="menu-close" aria-label="Close menu">×</button><a href="#stories">Stories</a><a href="#vision">Approach</a><a href="#archive">Photographs</a><a href="#contact">Get in touch</a></div>
+<main id="main">
+<section class="hero" id="top"><div class="hero-copy"><p class="eyebrow micro">Documentary wedding & event photography</p><h1><span>SSAJIN</span><span class="outline">STUDIO.</span></h1><p class="hero-quote">The fleeting moments.<br>The feeling that stays.</p><a class="text-link" href="#stories">Discover the stories <span aria-hidden="true">↘</span></a></div><div class="lens-wrap"><div class="lens-ring"></div><div class="orbit-dot"></div><figure class="lens"><img src="assets/photo-05.jpg" alt="A bride and groom sharing a quiet moment" fetchpriority="high" width="512" height="683"></figure><span class="lens-label">A MOMENT, HELD.</span></div><div class="hero-bottom micro"><span>Photography by Kekhriezalie Keretsu</span><a href="#intro">Scroll to discover ↓</a></div></section>
+<section class="intro" id="intro"><div class="intro-label micro">The way we see it</div><div><h2 class="reveal">Some moments<br>are felt <span class="soft">long<br>after they pass.</span></h2><div class="intro-bottom"><p>Wedding days are made of a thousand small things. A familiar hand. A sudden laugh. A quiet breath before everything begins.</p><p>We photograph the people, the atmosphere and the moments between, so you can return to how it all felt.</p></div></div></section>
+<section class="stories" id="stories"><div class="stories-pin"><div class="section-head"><h2>Life, as it happens.</h2><p>A selection of wedding moments from the Ssajin Studio archive.</p></div><div class="story-track" tabindex="0" aria-label="Selected wedding photographs"><figure class="story"><button class="story-photo" data-photo="1" aria-label="View a little movement"><img src="assets/photo-01.jpg" loading="lazy" alt="A little movement — Ssajin Studio wedding photography"></button><figcaption><h3>A little movement</h3><span class="story-meta micro">Celebrations</span></figcaption></figure><figure class="story"><button class="story-photo" data-photo="2" aria-label="View before the beginning"><img src="assets/photo-02.jpg" loading="lazy" alt="Before the beginning — Ssajin Studio wedding photography"></button><figcaption><h3>Before the beginning</h3><span class="story-meta micro">Anticipation</span></figcaption></figure><figure class="story"><button class="story-photo" data-photo="5" aria-label="View just the two of you"><img src="assets/photo-05.jpg" loading="lazy" alt="Just the two of you — Ssajin Studio wedding photography"></button><figcaption><h3>Just the two of you</h3><span class="story-meta micro">Connection</span></figcaption></figure><figure class="story"><button class="story-photo" data-photo="22" aria-label="View a world of our own"><img src="assets/photo-22.jpg" loading="lazy" alt="A world of our own — Ssajin Studio wedding photography"></button><figcaption><h3>A world of our own</h3><span class="story-meta micro">Together</span></figcaption></figure></div><div class="story-controls"><div class="story-progress" aria-hidden="true"><span></span></div><button class="round previous-story" aria-label="Previous story">←</button><button class="round next-story" aria-label="Next story">→</button></div></div></section>
+<section class="vision" id="vision"><div class="vision-photos"><figure class="large"><img src="assets/photo-02.jpg" loading="lazy" alt="A bride beside a window, her veil falling onto the wooden floor"></figure><figure class="small"><img src="assets/photo-04.jpg" loading="lazy" alt="White wedding flowers in soft natural light"></figure></div><div class="vision-copy"><span class="micro">Our approach</span><h2 class="reveal">Be here.<br>Feel it all.</h2><p>There is beauty in the unscripted. In the movement, the anticipation, and the people who make a day your own.</p><p>Ssajin Studio photographs weddings and events with a documentary eye, keeping those moments at the heart of the story.</p><div class="signature">Kekhriezalie Keretsu</div><a class="text-link" href="#contact">Tell us your story <span>↗</span></a></div></section>
+<section class="image-break" aria-label="A quiet wedding moment"><img src="assets/photo-06.jpg" alt="A couple leaning into a kiss" loading="lazy"><h2>Close to life.<br>Close to you.</h2></section>
+<section class="archive" id="archive"><div class="section-head"><h2 class="reveal">Collected moments.</h2><p>Twenty-four frames from the studio. Open a photograph and stay a little longer.</p></div><div class="photo-grid"><figure class="photo-item"><button class="photo-button" data-photo="1" aria-label="View photograph 1"><img src="assets/photo-01.jpg" alt="Wedding moment from the Ssajin Studio archive" loading="lazy" decoding="async" width="512" height="683"></button><figcaption>SSAJIN STUDIO / 01</figcaption></figure><figure class="photo-item"><button class="photo-button" data-photo="2" aria-label="View photograph 2"><img src="assets/photo-02.jpg" alt="Wedding moment from the Ssajin Studio archive" loading="lazy" decoding="async" width="512" height="683"></button><figcaption>SSAJIN STUDIO / 02</figcaption></figure><figure class="photo-item"><button class="photo-button" data-photo="3" aria-label="View photograph 3"><img src="assets/photo-03.jpg" alt="Wedding moment from the Ssajin Studio archive" loading="lazy" decoding="async" width="512" height="683"></button><figcaption>SSAJIN STUDIO / 03</figcaption></figure><figure class="photo-item"><button class="photo-button" data-photo="4" aria-label="View photograph 4"><img src="assets/photo-04.jpg" alt="Wedding moment from the Ssajin Studio archive" loading="lazy" decoding="async" width="512" height="683"></button><figcaption>SSAJIN STUDIO / 04</figcaption></figure><figure class="photo-item"><button class="photo-button" data-photo="5" aria-label="View photograph 5"><img src="assets/photo-05.jpg" alt="Wedding moment from the Ssajin Studio archive" loading="lazy" decoding="async" width="512" height="683"></button><figcaption>SSAJIN STUDIO / 05</figcaption></figure><figure class="photo-item"><button class="photo-button" data-photo="6" aria-label="View photograph 6"><img src="assets/photo-06.jpg" alt="Wedding moment from the Ssajin Studio archive" loading="lazy" decoding="async" width="512" height="683"></button><figcaption>SSAJIN STUDIO / 06</figcaption></figure><figure class="photo-item"><button class="photo-button" data-photo="7" aria-label="View photograph 7"><img src="assets/photo-07.jpg" alt="Wedding moment from the Ssajin Studio archive" loading="lazy" decoding="async" width="512" height="683"></button><figcaption>SSAJIN STUDIO / 07</figcaption></figure><figure class="photo-item"><button class="photo-button" data-photo="8" aria-label="View photograph 8"><img src="assets/photo-08.jpg" alt="Wedding moment from the Ssajin Studio archive" loading="lazy" decoding="async" width="512" height="683"></button><figcaption>SSAJIN STUDIO / 08</figcaption></figure><figure class="photo-item"><button class="photo-button" data-photo="9" aria-label="View photograph 9"><img src="assets/photo-09.jpg" alt="Wedding moment from the Ssajin Studio archive" loading="lazy" decoding="async" width="512" height="683"></button><figcaption>SSAJIN STUDIO / 09</figcaption></figure><figure class="photo-item"><button class="photo-button" data-photo="10" aria-label="View photograph 10"><img src="assets/photo-10.jpg" alt="Wedding moment from the Ssajin Studio archive" loading="lazy" decoding="async" width="512" height="683"></button><figcaption>SSAJIN STUDIO / 10</figcaption></figure><figure class="photo-item"><button class="photo-button" data-photo="11" aria-label="View photograph 11"><img src="assets/photo-11.jpg" alt="Wedding moment from the Ssajin Studio archive" loading="lazy" decoding="async" width="512" height="683"></button><figcaption>SSAJIN STUDIO / 11</figcaption></figure><figure class="photo-item"><button class="photo-button" data-photo="12" aria-label="View photograph 12"><img src="assets/photo-12.jpg" alt="Wedding moment from the Ssajin Studio archive" loading="lazy" decoding="async" width="512" height="683"></button><figcaption>SSAJIN STUDIO / 12</figcaption></figure><figure class="photo-item"><button class="photo-button" data-photo="13" aria-label="View photograph 13"><img src="assets/photo-13.jpg" alt="Wedding moment from the Ssajin Studio archive" loading="lazy" decoding="async" width="512" height="683"></button><figcaption>SSAJIN STUDIO / 13</figcaption></figure><figure class="photo-item"><button class="photo-button" data-photo="14" aria-label="View photograph 14"><img src="assets/photo-14.jpg" alt="Wedding moment from the Ssajin Studio archive" loading="lazy" decoding="async" width="512" height="683"></button><figcaption>SSAJIN STUDIO / 14</figcaption></figure><figure class="photo-item"><button class="photo-button" data-photo="15" aria-label="View photograph 15"><img src="assets/photo-15.jpg" alt="Wedding moment from the Ssajin Studio archive" loading="lazy" decoding="async" width="512" height="683"></button><figcaption>SSAJIN STUDIO / 15</figcaption></figure><figure class="photo-item"><button class="photo-button" data-photo="16" aria-label="View photograph 16"><img src="assets/photo-16.jpg" alt="Wedding moment from the Ssajin Studio archive" loading="lazy" decoding="async" width="512" height="683"></button><figcaption>SSAJIN STUDIO / 16</figcaption></figure><figure class="photo-item"><button class="photo-button" data-photo="17" aria-label="View photograph 17"><img src="assets/photo-17.jpg" alt="Wedding moment from the Ssajin Studio archive" loading="lazy" decoding="async" width="512" height="683"></button><figcaption>SSAJIN STUDIO / 17</figcaption></figure><figure class="photo-item"><button class="photo-button" data-photo="18" aria-label="View photograph 18"><img src="assets/photo-18.jpg" alt="Wedding moment from the Ssajin Studio archive" loading="lazy" decoding="async" width="512" height="683"></button><figcaption>SSAJIN STUDIO / 18</figcaption></figure><figure class="photo-item"><button class="photo-button" data-photo="19" aria-label="View photograph 19"><img src="assets/photo-19.jpg" alt="Wedding moment from the Ssajin Studio archive" loading="lazy" decoding="async" width="512" height="683"></button><figcaption>SSAJIN STUDIO / 19</figcaption></figure><figure class="photo-item"><button class="photo-button" data-photo="20" aria-label="View photograph 20"><img src="assets/photo-20.jpg" alt="Wedding moment from the Ssajin Studio archive" loading="lazy" decoding="async" width="512" height="683"></button><figcaption>SSAJIN STUDIO / 20</figcaption></figure><figure class="photo-item"><button class="photo-button" data-photo="21" aria-label="View photograph 21"><img src="assets/photo-21.jpg" alt="Wedding moment from the Ssajin Studio archive" loading="lazy" decoding="async" width="512" height="683"></button><figcaption>SSAJIN STUDIO / 21</figcaption></figure><figure class="photo-item"><button class="photo-button" data-photo="22" aria-label="View photograph 22"><img src="assets/photo-22.jpg" alt="Wedding moment from the Ssajin Studio archive" loading="lazy" decoding="async" width="512" height="683"></button><figcaption>SSAJIN STUDIO / 22</figcaption></figure><figure class="photo-item"><button class="photo-button" data-photo="23" aria-label="View photograph 23"><img src="assets/photo-23.jpg" alt="Wedding moment from the Ssajin Studio archive" loading="lazy" decoding="async" width="512" height="683"></button><figcaption>SSAJIN STUDIO / 23</figcaption></figure><figure class="photo-item"><button class="photo-button" data-photo="24" aria-label="View photograph 24"><img src="assets/photo-24.jpg" alt="Wedding moment from the Ssajin Studio archive" loading="lazy" decoding="async" width="512" height="683"></button><figcaption>SSAJIN STUDIO / 24</figcaption></figure></div></section>
+<section class="contact" id="contact"><p class="micro">Weddings, celebrations & the moments between</p><div class="contact-main"><h2 class="reveal">Your story.<br>Our next frame.</h2><a class="text-link" href="https://www.instagram.com/ssajin_studio/" target="_blank" rel="noopener noreferrer">Inquire on Instagram <span>↗</span></a></div><div class="footer-line micro"><span>Ssajin Studio · Kekhriezalie Keretsu</span><a href="https://www.instagram.com/ssajin_studio/" target="_blank" rel="noopener noreferrer">@ssajin_studio ↗</a><a href="#top">Back to top ↑</a></div></section>
+</main>
+<button class="motion-toggle" type="button" aria-pressed="false">Enable full motion</button><div class="cursor-label" aria-hidden="true">VIEW ↗</div>
+<dialog class="viewer" aria-label="Photography viewer"><div class="viewer-top micro"><span>Ssajin Studio — The photographs</span><button class="dialog-close" aria-label="Close photograph">×</button></div><div class="viewer-frame"><img alt="Wedding photograph by Ssajin Studio"></div><div class="viewer-bottom micro"><span class="viewer-count" aria-live="polite"></span><a class="viewer-source" target="_blank" rel="noopener noreferrer">Original Instagram post ↗</a><div class="viewer-nav"><button class="round" data-step="-1" aria-label="Previous photograph">←</button><button class="round" data-step="1" aria-label="Next photograph">→</button></div></div></dialog>
+<script src="assets/gsap.min.js"></script><script src="assets/ScrollTrigger.min.js"></script>
 <script>
-{
-let preference;
-try{preference=sessionStorage.getItem('ssajin-motion')}catch{}
-window.studioMotionReduced=preference==='reduced'||(preference!=='full'&&matchMedia('(prefers-reduced-motion: reduce)').matches);
-document.documentElement.dataset.motion=window.studioMotionReduced?'reduced':'full';
-window.studioMotionQuery=()=>matchMedia(window.studioMotionReduced?'(min-width:0px)':'(max-width:0px)');
-}
-</script><style>
-:root{--paper:#f3ede3;--ink:#1c1916;--red:#9f2029;--soft:#61574e;--pad:clamp(20px,4.3vw,76px);--line:#d2c9bb;--ease:cubic-bezier(.2,.72,.22,1);--serif:Georgia,'Times New Roman',serif;--mono:Consolas,'Courier New',monospace}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 Arial,sans-serif}a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;cursor:pointer}img{display:block;width:100%;height:100%;object-fit:cover}h1,h2,h3,p,figure{margin:0}a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #d34852;outline-offset:5px}.meta{font:11px/1.5 var(--mono);text-transform:uppercase;letter-spacing:.13em}.skip{position:fixed;top:12px;left:12px;z-index:20;background:white;padding:10px;transform:translateY(-150%)}.skip:focus{transform:none}.progress{position:fixed;z-index:12;inset:0 0 auto;height:3px;background:#ac2734;transform-origin:left;transform:scaleX(0)}.top{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:20px var(--pad);border-bottom:1px solid var(--line)}.brand{font-family:var(--serif);font-size:23px;letter-spacing:-.07em;white-space:nowrap}.brand i{color:var(--red)}nav{display:flex;align-items:center;gap:clamp(14px,3vw,50px)}nav a:hover,.textlink:hover{color:var(--red)}.pill{border:1px solid currentColor;border-radius:100px;padding:10px 16px;display:inline-flex;align-items:center;gap:12px;white-space:nowrap;transition:background .3s,color .3s}.pill:hover{background:var(--ink);color:var(--paper)}.hero{padding:clamp(19px,3.4vh,42px) var(--pad) 19px;min-height:calc(100svh - 74px);display:grid;grid-template-columns:1.02fr .98fr;grid-template-rows:1fr auto;gap:16px 0;position:relative}.intro{z-index:2;align-self:center;padding:16px 0}.kicker{display:flex;align-items:center;gap:10px;color:var(--red);margin-bottom:24px}.kicker:before{content:'';height:1px;width:27px;background:currentColor}h1{font:normal clamp(60px,9.25vw,170px)/.79 var(--serif);letter-spacing:-.09em;position:relative;margin-left:-.055em}h1 .mask{display:block;overflow:clip;padding:0 .13em .15em 0;margin-bottom:-.05em;width:max-content}h1 .mask span{display:block}h1 em{font-weight:normal;color:var(--red)}.intro p{color:var(--soft);max-width:32ch;margin:22px 0 26px;font-size:clamp(15px,1.3vw,19px)}.heroArt{position:relative;align-self:stretch;min-height:470px;isolation:isolate;background:#33271f;overflow:hidden}.heroArt img{position:absolute;inset:0;object-position:50% 48%;transform:translate3d(var(--px,0px),calc(var(--py,0px) + var(--sy,0px)),0) scale(1.12);will-change:transform}.heroArt:after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,#17100b99,transparent 30%);pointer-events:none}.photo-note{position:absolute;bottom:22px;left:22px;right:22px;display:flex;justify-content:space-between;color:white;z-index:1}.stamp{position:absolute;z-index:3;right:calc(var(--pad) + 20px);top:clamp(36px,6vh,70px);width:64px;height:64px;display:grid;place-items:center;background:var(--paper);border-radius:100%;font:34px var(--serif);color:var(--red);animation:rotate 22s linear infinite}.herofoot{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:14px;color:var(--soft)}.herofoot a{color:var(--red)}.scrollarrow{display:inline-block;animation:bob 1.8s ease-in-out infinite}@keyframes rotate{to{rotate:360deg}}@keyframes bob{50%{transform:translateY(4px)}}@keyframes enter{from{transform:translateY(105%)}to{transform:none}}@keyframes photograph{from{clip-path:inset(100% 0 0)}to{clip-path:inset(0)}}.intro .mask span{animation:enter 1.1s var(--ease) both}.intro .mask:nth-child(2) span{animation-delay:.13s}.heroArt{animation:photograph 1.3s var(--ease) both}
-.ticker{background:var(--red);color:var(--paper);overflow:hidden;padding:12px 0}.ticker div{width:max-content;display:flex;animation:ticker 32s linear infinite}.ticker span{white-space:nowrap;padding-right:2em;font:italic clamp(24px,4vw,63px)/1 var(--serif)}@keyframes ticker{to{transform:translateX(-50%)}}
-.work{--workbg:#201a17;background:var(--workbg);color:var(--paper);position:relative}.workpin{padding:clamp(24px,4vh,48px) 0;overflow:hidden}.railhead,.railfoot{margin-inline:var(--pad);display:flex;justify-content:space-between;align-items:end;gap:18px}.railhead{padding-bottom:15px;border-bottom:1px solid #ffffff35}.railhead h2,.section-title{font:normal clamp(53px,8.2vw,140px)/.91 var(--serif);letter-spacing:-.08em}.railhead p{max-width:25ch;color:#dacbbd}.track{display:flex;gap:clamp(14px,2vw,28px);padding:20px var(--pad);overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:var(--pad)}.concept{flex:0 0 min(68vw,980px);scroll-snap-align:start;min-width:0}.concept .visual{height:clamp(230px,52svh,680px);position:relative;overflow:hidden;isolation:isolate;background:#514539}.visual img{object-position:center 49%;transition:transform .9s var(--ease)}.concept .visual img{transform:translate3d(var(--drift,0px),0,0) scale(var(--zoom,1.04))}.pinned .concept .visual img{transition:none}.concept:hover{--zoom:1.085}.visual:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#17100ba8,transparent 83%);z-index:0}.concept-type{position:absolute;z-index:1;inset:auto 7% 8%;font:italic clamp(44px,7vw,124px)/.86 var(--serif);letter-spacing:-.07em;color:#fff8ed;text-wrap:balance}.concept:nth-child(2) .visual img{object-position:50% 37%}.concept:nth-child(3) .visual img{object-position:50% 51%}.concept figcaption{display:flex;justify-content:space-between;gap:8px;padding-top:9px;color:#e2d3c5}.railfoot{align-items:center}.railbuttons{display:flex;gap:6px}.railbuttons button{border:1px solid #ffffff70;background:transparent;width:42px;height:42px;border-radius:50%}.railbuttons button:hover{background:var(--paper);color:var(--ink)}.railbuttons button:disabled{opacity:.35;cursor:default}.meter{flex:1;max-width:250px;height:2px;background:#ffffff36}.meter span{display:block;width:100%;height:100%;background:#efb9ab;transform:scaleX(.06);transform-origin:left}.pinned .workpin{overflow:clip;position:sticky;top:0;height:100svh;display:flex;flex-direction:column;justify-content:center}.pinned .track{overflow:visible;width:max-content;will-change:transform}
-.services,.archive{padding:clamp(74px,12vw,190px) var(--pad)}.section-title em{color:var(--red);font-weight:normal}.services .section-title,.archive .section-title{margin:18px 0 34px}.servicegrid{display:grid;grid-template-columns:1fr 1.8fr;gap:6vw;align-items:start}.servicegrid>p{max-width:31ch;color:var(--soft)}details{border-top:1px solid var(--line)}details:last-child{border-bottom:1px solid var(--line)}summary{display:grid;grid-template-columns:36px 1fr 26px;gap:12px;align-items:center;padding:16px 0;cursor:pointer;list-style:none;font:normal clamp(24px,3.5vw,54px)/1.05 var(--serif);letter-spacing:-.045em}summary::-webkit-details-marker{display:none}summary small{color:var(--red)}summary:after{content:'+';font:24px Arial;justify-self:center;transition:rotate .35s}details[open] summary:after{rotate:45deg}details p{padding:0 28px 18px 48px;color:var(--soft);max-width:57ch}details[open] p{animation:details-in .35s var(--ease)}@keyframes details-in{from{opacity:0;transform:translateY(-7px)}}
-.archive{background:#e8dfd3}.archive-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:30px}.archive-head .section-title{margin-bottom:0}.archive-head p{max-width:30ch;color:var(--soft)}.archive-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px}.archive-grid a{aspect-ratio:4/5;position:relative;overflow:hidden;background:#c9b6a4;display:block}.archive-grid img{transition:transform .65s var(--ease),filter .65s}.archive-grid a:hover img,.archive-grid a:focus-visible img{transform:scale(1.12);filter:brightness(.75)}.archive-grid a:after{content:'↗';position:absolute;right:10px;top:6px;color:white;opacity:0;transition:opacity .35s}.archive-grid a:hover:after,.archive-grid a:focus-visible:after{opacity:1}
-footer{background:var(--red);color:var(--paper);padding:clamp(65px,11vw,160px) var(--pad) 24px}.footerbody{display:flex;justify-content:space-between;align-items:end;gap:25px;margin:20px 0 65px}.footerbody h2{font:normal clamp(64px,12vw,196px)/.81 var(--serif);letter-spacing:-.093em}.footerbody .pill:hover{background:var(--paper);color:var(--red)}.footerline{border-top:1px solid #ffffff6e;padding-top:15px;display:flex;justify-content:space-between;gap:15px}.footerline a:hover{text-decoration:underline}.js .reveal{opacity:0;transform:translateY(38px);transition:opacity .75s var(--ease),transform .82s var(--ease)}.js .reveal.in,.js .reveal:focus-within,.js .reveal:focus{opacity:1;transform:none}.archive-grid a.reveal{transition-delay:var(--delay,0ms)}
-@media(max-width:850px){.intro h1{font-size:clamp(53px,10vw,90px)}.heroArt{min-height:420px}.servicegrid{grid-template-columns:1fr;gap:28px}.archive-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
-@media(max-width:620px){.top{padding-block:13px;gap:12px}.top nav{gap:15px}.top nav .nav-archive{display:none}.top .pill{padding:7px 10px}.hero{grid-template-columns:1fr;grid-template-rows:auto auto auto;padding-top:17px}.intro{padding-bottom:6px}.intro h1{font-size:clamp(52px,14vw,84px)}.kicker{margin-bottom:18px}.intro p{margin:14px 0 16px}.heroArt{min-height:0;height:clamp(255px,57vw,355px)}.stamp{top:auto;bottom:69px;width:49px;height:49px;right:calc(var(--pad) + 12px);font-size:26px}.photo-note{bottom:13px;left:12px;right:12px;font-size:9px}.photo-note span:last-child{padding-right:65px}.herofoot{font-size:9px}.track{padding-block:14px}.concept{flex-basis:82vw}.railhead{align-items:start;flex-direction:column;gap:8px}.railhead h2{font-size:clamp(46px,12vw,75px)}.railhead p{max-width:none;font-size:14px}.concept .visual{height:clamp(220px,56vw,330px)}.concept figcaption{font-size:9px}.archive-head,.footerbody{display:block}.archive-head p,.footerbody .pill{margin-top:22px}.archive-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}.footerline{font-size:9px}.services .section-title,.archive .section-title{font-size:clamp(45px,13vw,81px)}}
-@media(max-width:360px){.top{gap:8px;padding-inline:14px}.top nav{gap:10px}.top .meta{letter-spacing:.08em}.top .pill{gap:6px}.herofoot{letter-spacing:.065em}}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.heroArt img,.concept .visual img{transform:none}.js .reveal{opacity:1;transform:none}}
-
-/* Scroll-driven composition. The base layout also works without scroll timelines. */
-.heroArt img{transition:scale .85s var(--ease);transform-origin:50% 46%}
-.heroArt:hover img{scale:1.065}
-.concept .visual{transform:perspective(1000px) rotateY(var(--yaw,0deg)) scale(var(--panel-scale,1));transform-origin:center}
-.concept-type{transform:translateX(var(--caption-shift,0px))}
-.concept .visual img{transform:translate3d(var(--drift,0px),0,0) scale(var(--zoom,1.06))}
-.ticker:hover div{animation-play-state:paused}
-.archive-grid a:nth-child(6n+1),.archive-grid a:nth-child(6n+4){--photo-start:15px;--photo-end:-15px}
-.archive-grid a:nth-child(6n+2),.archive-grid a:nth-child(6n+5){--photo-start:-8px;--photo-end:8px}
-.archive-grid a:nth-child(6n+3),.archive-grid a:nth-child(6n){--photo-start:11px;--photo-end:-11px}
-@supports (animation-timeline:view()){
-  @media (prefers-reduced-motion:no-preference){
-    .hero .intro{animation:hero-out linear both;animation-timeline:view();animation-range:exit 10% exit 94%}
-    .section-title .kinetic,.footerbody h2 .kinetic{display:inline-block;animation:type-slide linear both;animation-timeline:view();animation-range:entry 6% cover 45%}
-    .archive-grid a img{animation:photo-travel linear both;animation-timeline:view();animation-range:entry 0% exit 100%}
-    .archive-grid a:hover img,.archive-grid a:focus-visible img{scale:1.045}
+const posts=["DB6Li0IPZwQ","C2Xa1MQPLYu","CrlPGnZv3la","Dey3-ZrAex5","DegvEKQAYMY","Dd_VtSOAXgE","DdylBgYgcrK","DdJiUH7AV3Z","Dc_E2g3Ae8I","DQzFshUgRWU","Dau-0ysAepp","DRPSQwtgSvd","DNVbZ22PSfs","DbDrsWYgYK1","DMprGK_v3u8","DKen6KQp1RE","DMDHMyLvKo0","DId4iToPYzH","DH55lo9PPE9","DIYy0xdvWK9","DHvZCPdvEHF","DHlOOKTvKfw","DHBLw6Mvq1M","DF-RjRcPK7B"];
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+let savedMotion;try{savedMotion=localStorage.getItem('ssajin-motion')}catch{}
+const preference=matchMedia('(prefers-reduced-motion: reduce)');
+let fullMotion=savedMotion?savedMotion==='full':!preference.matches;
+let motionContext,railTween,railTrigger;
+const track=$('.story-track'),cards=$$('.story'),motionButton=$('.motion-toggle');
+function setupMotion(){
+ motionContext?.revert();
+ railTween=null;railTrigger=null;
+ document.documentElement.dataset.motion=fullMotion?'full':'reduced';
+ motionButton.textContent=fullMotion?'Reduce motion':'Enable full motion';
+ motionButton.setAttribute('aria-pressed',String(fullMotion));
+ if(!fullMotion||!window.gsap||!window.ScrollTrigger)return;
+ gsap.registerPlugin(ScrollTrigger);
+ motionContext=gsap.context(()=>{
+  gsap.from('.hero-copy h1 span',{yPercent:45,opacity:0,duration:1.1,stagger:.15,delay:1.15,ease:'power3.out'});
+  gsap.from('.lens-wrap',{scale:.72,rotation:-15,opacity:0,duration:1.5,delay:.6,ease:'power3.out'});
+  gsap.to('.lens img',{scale:1.22,yPercent:12,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:1}});
+  gsap.to('.hero-copy',{y:-80,opacity:.2,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:1}});
+  $$('.reveal').forEach(el=>gsap.from(el,{y:65,opacity:.1,duration:1.15,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 90%',toggleActions:'play none none reverse'}}));
+  gsap.from('.vision .large',{y:75,ease:'none',scrollTrigger:{trigger:'.vision',start:'top bottom',end:'bottom top',scrub:1}});
+  gsap.fromTo('.vision .small',{y:100},{y:-70,ease:'none',scrollTrigger:{trigger:'.vision',start:'top bottom',end:'bottom top',scrub:1}});
+  gsap.fromTo('.image-break img',{scale:1.18,yPercent:-8},{scale:1.05,yPercent:8,ease:'none',scrollTrigger:{trigger:'.image-break',start:'top bottom',end:'bottom top',scrub:1}});
+  gsap.fromTo('.image-break h2',{y:70},{y:-70,ease:'none',scrollTrigger:{trigger:'.image-break',start:'top bottom',end:'bottom top',scrub:1}});
+  $$('.photo-item').forEach((item,i)=>gsap.from(item,{y:55,opacity:0,duration:.85,delay:i%4*.06,ease:'power2.out',scrollTrigger:{trigger:item,start:'top 94%',once:true}}));
+  if(innerWidth>850&&innerHeight>650){
+   track.scrollLeft=0;
+   gsap.set(track,{overflow:'visible',width:'max-content'});
+   const distance=()=>Math.max(0,track.scrollWidth-innerWidth);
+   railTween=gsap.to(track,{x:()=>-distance(),ease:'none',scrollTrigger:{trigger:'.stories-pin',start:'top top',end:()=>'+='+distance(),pin:true,scrub:.9,invalidateOnRefresh:true,onUpdate:self=>{$('.story-progress span').style.transform='scaleX('+(.05+.95*self.progress)+')'}}});
+   railTrigger=railTween.scrollTrigger;
   }
-}
-@keyframes hero-out{to{transform:translate3d(-30px,-42px,0);opacity:.22}}
-@keyframes type-slide{from{transform:translate3d(clamp(17px,4vw,65px),.24em,0) rotate(3deg)}to{transform:none}}
-@keyframes photo-travel{from{transform:translateY(var(--photo-start)) scale(1.22)}to{transform:translateY(var(--photo-end)) scale(1.22)}}
-@media(max-width:620px){@keyframes hero-out{to{transform:translateY(-18px);opacity:.5}}}
-@media(prefers-reduced-motion:reduce){.heroArt:hover img,.archive-grid a:hover img{scale:1}.concept .visual,.concept .visual img,.concept-type{transform:none}}
-
-.archive-grid a{cursor:zoom-in}
-.archive-grid a:after{content:'+';display:grid;place-items:center;width:36px;height:36px;border:1px solid #fff9;border-radius:50%;background:#211b16a0;font:23px/1 Arial}
-.archive-grid a:nth-child(12n+1){grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
-.archive-grid a:nth-child(12n+8){grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
-.archive-grid a:nth-child(12n+1) img,.archive-grid a:nth-child(12n+8) img{position:absolute;inset:0}
-.archive-grid{grid-auto-flow:dense}
-.gallery-viewer{border:0;padding:0;max-width:none;max-height:none;width:100%;height:100%;margin:0;background:#1c1916;color:#f3ede3;overflow:auto}
-.gallery-viewer[open]{display:grid;grid-template-rows:auto minmax(0,1fr) auto;gap:14px;padding:clamp(15px,3vw,42px);animation:viewer-in .36s var(--ease) both}
-.gallery-viewer::backdrop{background:#1c1916}
-body:has(.gallery-viewer[open]){overflow:hidden}
-.viewer-bar{display:flex;justify-content:space-between;align-items:center;gap:14px}
-.viewer-figure{margin:0;min-height:0;display:grid;place-items:center;overflow:hidden;touch-action:pan-y;user-select:none}
-.viewer-figure img{width:auto;height:auto;max-height:100%;max-width:100%;object-fit:contain}
-.viewer-control{border:1px solid #e8dfd38c;background:transparent;border-radius:100%;width:46px;height:46px;flex:none;transition:color .25s,background .25s}
-.viewer-control:hover{background:var(--paper);color:var(--ink)}
-.viewer-controls{display:flex;gap:8px}.viewer-source:hover{text-decoration:underline}
-@keyframes viewer-in{from{opacity:0;transform:scale(.985)}}
-@supports (animation-timeline:view()){
- @media(prefers-reduced-motion:no-preference){
-
-   .services .section-title,.archive .section-title{animation:headline-settle linear both;animation-timeline:view();animation-range:entry 0% cover 35%}
-   .services details summary{animation:row-settle linear both;animation-timeline:view();animation-range:entry 0% cover 25%}
-   .footerbody h2{animation:headline-settle linear both;animation-timeline:view();animation-range:entry 0% cover 45%}
- }
-}
-@keyframes headline-settle{from{translate:0 .13em;clip-path:inset(0 0 23% 0)}to{translate:none;clip-path:inset(0 0 0 0)}}
-@keyframes row-settle{from{translate:-15px 0}to{translate:none}}
-@media(max-width:620px){.archive-grid a:nth-child(12n+1),.archive-grid a:nth-child(12n+8){grid-column:auto;grid-row:auto;aspect-ratio:4/5}}
-
-/* Touch targets, a native swipe rail, and space for phone display cutouts. */
-@media(max-width:850px){
-  .track{scrollbar-width:none;overscroll-behavior-x:contain}
-  .track::-webkit-scrollbar{display:none}
-  .railhead p{max-width:29ch}
-  .railbuttons button{width:46px;height:46px}
-}
-@media(max-width:620px){
-  .top nav a{display:inline-flex;min-height:44px;align-items:center}
-  .top .pill{min-height:44px}
-  .herofoot a,.footerline a{min-height:44px;display:inline-flex;align-items:center;gap:5px}
-  .herofoot{padding-top:2px}
-  .heroArt img{transition:none}
-  .intro .pill{min-height:44px}
-  .viewer-bar{gap:8px}
-  .viewer-bar:first-child{padding-top:env(safe-area-inset-top)}
-  .viewer-bar:last-child{padding-bottom:env(safe-area-inset-bottom)}
-  .viewer-figure img{width:100%;height:100%}
-  .viewer-count,.viewer-source{font-size:10px;letter-spacing:.07em}
-  .archive-grid a:after{display:none}
-}
-</style><style>
-.hero{min-height:120svh;grid-template-columns:1fr;padding-top:7vh;overflow:clip;background:#201a17;color:#f3ede3}
-.hero .intro{align-self:start;position:relative;z-index:4;pointer-events:none;padding-top:2vh}.hero .intro a{pointer-events:auto}.hero .intro p{color:#e8dfd3;max-width:30ch;background:#201a17bd;padding:8px 0}
-.hero h1{font-size:clamp(66px,12vw,180px);line-height:.86}.hero h1 em{color:#e8a19c}.hero .kicker{color:#e8a19c}.hero .heroArt{position:absolute;right:7%;top:22%;width:37%;height:63%;min-height:0;rotate:7deg;border:8px solid #f3ede3;box-shadow:0 25px 80px #0005}
-.hero .herofoot{align-self:end;position:relative;z-index:5;color:#e8dfd3;border-color:#ffffff40}.hero .herofoot a{color:#e8a19c}.hero .stamp{top:auto;bottom:16%;right:36%;width:86px;height:86px;z-index:6}
-.hero-extra{position:absolute;object-fit:cover;border:6px solid #f3ede3;box-shadow:0 20px 50px #0005;pointer-events:none}
-.hero-extra.one{width:18%;height:31%;left:36%;top:42%;rotate:-12deg;z-index:2}
-.hero-extra.two{width:19%;height:29%;left:9%;bottom:12%;rotate:7deg;z-index:1}
-.hero-extra.three{width:17%;height:25%;right:-4%;top:7%;rotate:-14deg}
-.hero-extra.four{width:15%;height:23%;left:30%;top:-9%;rotate:13deg}
-.contact-sheet{position:relative;height:260svh;background:#9f2029;color:#f3ede3}
-.sheet-stage{height:100svh;position:sticky;top:0;overflow:clip;display:grid;place-items:center;perspective:1100px}
-.sheet-title{font:italic clamp(70px,12vw,185px)/.85 Georgia;letter-spacing:-.07em;position:relative;z-index:3;text-align:center;pointer-events:none;text-shadow:0 2px 20px #211b1640}
-.sheet-pictures{position:absolute;inset:0;display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(2,1fr);gap:12px;padding:8vh 8vw}
-.sheet-pictures figure{position:relative;min-height:0;margin:0;will-change:transform;overflow:hidden}
-.sheet-pictures img{width:100%;height:100%;object-fit:cover}
-.sheet-label{position:absolute;bottom:3%;left:var(--pad);z-index:4}
-.motion-switch{bottom:12px;right:12px;font-size:10px;opacity:.9}.motion-switch:hover{opacity:1}
-@media(max-width:620px){
-.hero{min-height:108svh;padding-top:4vh}.hero h1{font-size:18vw}.hero .intro p{max-width:26ch;font-size:14px}.hero .heroArt{top:46%;right:11%;height:39%;width:53%;border-width:4px}
-.hero-extra.one{left:5%;top:55%;width:31%;height:25%;border-width:3px}.hero-extra.two{display:none}.hero-extra.three{right:-7%;top:31%;width:30%;height:24%;border-width:3px}.hero-extra.four{left:60%;top:-7%;width:26%;height:17%;border-width:3px}
-.hero .stamp{width:60px;height:60px;bottom:17%;right:8%}.hero .herofoot{font-size:8px;padding-bottom:24px}
-.sheet-pictures{grid-template-columns:repeat(2,1fr);grid-template-rows:repeat(4,1fr);padding:7vh 5vw;gap:7px}.sheet-title{font-size:17vw}.contact-sheet{height:240svh}
-}
-html[data-motion="reduced"] .contact-sheet{height:auto}html[data-motion="reduced"] .sheet-stage{min-height:100svh;height:auto;padding:100px 0}html[data-motion="reduced"] .sheet-pictures{position:relative;width:100%;height:100svh}html[data-motion="reduced"] .sheet-title{position:absolute;top:24px;font-size:50px}html[data-motion="reduced"] *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
-</style><style>
-html{overflow-x:clip}body{overflow-x:clip}.opening{position:fixed;inset:0;z-index:100;background:#9f2029;color:#f3ede3;display:grid;place-content:center;text-align:center;pointer-events:none;animation:curtain 1.9s cubic-bezier(.76,0,.24,1) forwards}.opening strong{font:italic clamp(70px,16vw,240px)/1 Georgia;letter-spacing:-.08em;animation:opening-type 1.2s both}.opening small{font:11px Consolas;letter-spacing:.35em}.opening-line{height:1px;background:#f3ede3;margin:30px 0;transform-origin:left;animation:opening-line 1.1s both}
-@keyframes curtain{0%,62%{transform:translateY(0)}100%{transform:translateY(-101%);visibility:hidden}}@keyframes opening-type{from{opacity:0;transform:translateY(65px) rotate(4deg)}to{opacity:1;transform:none}}@keyframes opening-line{from{transform:scaleX(0)}to{transform:scaleX(1)}}
-.intro .mask span{animation-delay:1.4s!important}.intro .mask:nth-child(2) span{animation-delay:1.55s!important}.heroArt{animation-delay:1.1s!important}
-.motion-film{height:260svh;background:#201a17;color:#f3ede3;position:relative}.film-pin{position:sticky;top:0;height:100svh;overflow:hidden;display:flex;align-items:center}.film-title{position:absolute;top:8%;left:var(--pad);font:italic clamp(65px,9vw,125px)/.9 Georgia;letter-spacing:-.07em;z-index:2;pointer-events:none}.film-strip{display:flex;gap:4vw;padding:0 12vw;will-change:transform}.film-strip img{width:42vw;height:65svh;object-fit:cover;flex:none;transform:rotate(var(--angle));box-shadow:0 20px 70px #0007}.film-caption{position:absolute;bottom:4%;left:var(--pad)}.services .section-title,.archive .section-title,.footerbody h2{animation:none!important}.archive-grid a{will-change:transform}.motion-on .hero .intro{animation:none}.motion-on .section-title .kinetic{animation:none}.motion-on .services details summary{animation:none}
-@media(max-width:620px){.film-strip img{width:74vw;height:56svh}.film-title{top:10%;font-size:17vw}.motion-film{height:230svh}}
-@media(prefers-reduced-motion:reduce){.opening{display:none}.motion-film{height:auto}.film-pin{position:relative;height:auto;min-height:75svh;padding:130px 0 80px}.film-strip{overflow:auto;width:100%;transform:none!important}.film-strip img{transform:none}.film-title{font-size:45px}}
-</style>
-<a class="skip" href="#main">Skip to content</a><div aria-hidden="true" class="progress"></div>
-<header class="top" id="top"><a class="brand" href="#top" aria-label="Ssajin Studio home">ssajin<i>studio.</i></a><nav aria-label="Main navigation" class="meta"><a href="#work">Work</a><a href="#services">Services</a><a class="nav-archive" href="#archive">Archive</a></nav><a class="pill meta" href="#contact">Contact <span aria-hidden="true">↗</span></a></header>
-<div class="opening" aria-hidden="true"><strong>ssajin.</strong><div class="opening-line"></div><small>EXPERIENCES IN MOTION</small></div><button class="motion-switch meta" type="button">Enable full motion</button><main id="main">
-<section class="hero" aria-labelledby="headline"><div class="intro"><div class="kicker meta">Independent development studio</div><h1 id="headline"><span class="mask"><span>Digital built</span></span><span class="mask"><span><em>to move.</em></span></span></h1><p>Custom websites, online stores and apps, designed around how your business works.</p><a class="pill meta" href="#work">Explore the work <span aria-hidden="true">↘</span></a></div>
-<img class="hero-extra one" src="assets/photo-02.jpg" alt="" decoding="async"><img class="hero-extra two" src="assets/photo-11.jpg" alt="" decoding="async"><img class="hero-extra three" src="assets/photo-15.jpg" alt="" decoding="async"><img class="hero-extra four" src="assets/photo-21.jpg" alt="" decoding="async"><figure class="heroArt"><img src="assets/photo-01.jpg" width="512" height="683" fetchpriority="high" decoding="async" alt="A couple caught in motion beneath a chandelier"><figcaption class="photo-note meta"><span>Photography by Ssajin Studio</span><span>Film 01</span></figcaption></figure><span class="stamp" aria-hidden="true">✳</span>
-<div class="herofoot meta"><span>Design &amp; full-stack development</span><a href="#work">Scroll to explore <span class="scrollarrow" aria-hidden="true">↓</span></a></div></section>
-<div class="ticker" aria-hidden="true"><div><span>Websites ✳ Online stores ✳ Portfolios ✳ Apps ✳</span><span>Websites ✳ Online stores ✳ Portfolios ✳ Apps ✳</span><span>Websites ✳ Online stores ✳ Portfolios ✳ Apps ✳</span><span>Websites ✳ Online stores ✳ Portfolios ✳ Apps ✳</span></div></div>
-<section class="work" id="work" aria-labelledby="work-title"><div class="workpin"><div class="railhead"><h2 id="work-title">Digital concepts.</h2><p>Three ways we’d bring a business online.</p></div>
-<div class="track" role="region" aria-label="Development concepts" tabindex="0">
-<figure class="concept"><div class="visual"><img src="assets/photo-02.jpg" width="512" height="683" alt="A bride standing beside a window in a long veil"><span class="concept-type">The editorial<br>portfolio</span></div><figcaption class="meta"><span>01 / Portfolio concept</span><span>Creative businesses</span></figcaption></figure>
-<figure class="concept"><div class="visual"><img src="assets/photo-04.jpg" width="512" height="683" loading="lazy" alt="Wedding details and white flowers in directional light"><span class="concept-type">The online<br>store</span></div><figcaption class="meta"><span>02 / Commerce concept</span><span>Independent brands</span></figcaption></figure>
-<figure class="concept"><div class="visual"><img src="assets/photo-03.jpg" width="512" height="683" loading="lazy" alt="Two wedding portraits in a green landscape"><span class="concept-type">The client<br>portal</span></div><figcaption class="meta"><span>03 / App concept</span><span>Service businesses</span></figcaption></figure>
-</div><div class="railfoot"><span class="meta railcount" aria-hidden="true">01 / 03</span><div class="meter" aria-hidden="true"><span></span></div><div class="railbuttons"><button type="button" aria-label="Previous concept">←</button><button type="button" aria-label="Next concept">→</button></div></div></div></section>
-<section class="motion-film" aria-label="Photography in motion"><div class="film-pin"><h2 class="film-title">A different<br>perspective.</h2><div class="film-strip"><img src="assets/photo-06.jpg" alt="Ssajin Studio wedding photography" loading="lazy" style="--angle:-5deg"><img src="assets/photo-10.jpg" alt="Ssajin Studio wedding photography" loading="lazy" style="--angle:5deg"><img src="assets/photo-14.jpg" alt="Ssajin Studio wedding photography" loading="lazy" style="--angle:-5deg"><img src="assets/photo-18.jpg" alt="Ssajin Studio wedding photography" loading="lazy" style="--angle:5deg"><img src="assets/photo-22.jpg" alt="Ssajin Studio wedding photography" loading="lazy" style="--angle:-5deg"></div><span class="film-caption meta">Photography by Ssajin Studio · Keep scrolling ↓</span></div></section><section class="services" id="services"><div class="meta reveal">What we build</div><h2 class="section-title reveal">Built around <em class="kinetic">you.</em></h2><div class="servicegrid"><p class="reveal">One studio for the design, the code and the systems behind your website or app.</p><div class="reveal">
-<details open><summary><small class="meta">01</small> Websites &amp; portfolios</summary><p>Custom business sites and portfolios with clear navigation, responsive layouts and content you can update yourself.</p></details>
-<details><summary><small class="meta">02</small> Online stores</summary><p>Storefronts with product pages, checkout and order management for how you sell and ship.</p></details>
-<details><summary><small class="meta">03</small> Apps &amp; portals</summary><p>Web and mobile apps with accounts, dashboards, integrations and the backend to support them.</p></details>
-</div></div></section>
-<section class="contact-sheet" aria-label="Studio photography collection"><div class="sheet-stage"><h2 class="sheet-title">Every frame.<br>A new feeling.</h2><div class="sheet-pictures"><figure><img src="assets/photo-03.jpg" loading="lazy" alt="Wedding photography from Ssajin Studio"></figure><figure><img src="assets/photo-05.jpg" loading="lazy" alt="Wedding photography from Ssajin Studio"></figure><figure><img src="assets/photo-07.jpg" loading="lazy" alt="Wedding photography from Ssajin Studio"></figure><figure><img src="assets/photo-09.jpg" loading="lazy" alt="Wedding photography from Ssajin Studio"></figure><figure><img src="assets/photo-13.jpg" loading="lazy" alt="Wedding photography from Ssajin Studio"></figure><figure><img src="assets/photo-16.jpg" loading="lazy" alt="Wedding photography from Ssajin Studio"></figure><figure><img src="assets/photo-20.jpg" loading="lazy" alt="Wedding photography from Ssajin Studio"></figure><figure><img src="assets/photo-24.jpg" loading="lazy" alt="Wedding photography from Ssajin Studio"></figure></div><span class="sheet-label meta">The studio collection · Photography in motion</span></div></section><section class="archive" id="archive"><div class="archive-head"><div><div class="meta reveal">Photography by Kekhriezalie Keretsu</div><h2 class="section-title reveal">The <em class="kinetic">photo archive.</em></h2></div><p class="reveal">Documentary weddings and events from the studio’s Instagram. Open any photograph to browse the archive.</p></div><div class="archive-grid"><a class="reveal" style="--delay:0ms" href="https://www.instagram.com/ssajin_studio/p/DB6Li0IPZwQ/" target="_blank" rel="noopener noreferrer" aria-label="Open Ssajin Studio photo 1 on Instagram"><img alt="" decoding="async" width="512" height="683" loading="lazy" src="assets/photo-01.jpg"></a>
-<a class="reveal" style="--delay:35ms" href="https://www.instagram.com/ssajin_studio/p/C2Xa1MQPLYu/" target="_blank" rel="noopener noreferrer" aria-label="Open Ssajin Studio photo 2 on Instagram"><img alt="" decoding="async" width="512" height="683" loading="lazy" src="assets/photo-02.jpg"></a>
-<a class="reveal" style="--delay:70ms" href="https://www.instagram.com/ssajin_studio/p/CrlPGnZv3la/" target="_blank" rel="noopener noreferrer" aria-label="Open Ssajin Studio photo 3 on Instagram"><img alt="" decoding="async" width="512" height="683" loading="lazy" src="assets/photo-03.jpg"></a>
-<a class="reveal" style="--delay:105ms" href="https://www.instagram.com/ssajin_studio/p/Dey3-ZrAex5/" target="_blank" rel="noopener noreferrer" aria-label="Open Ssajin Studio photo 4 on Instagram"><img alt="" decoding="async" width="512" height="683" loading="lazy" src="assets/photo-04.jpg"></a>
-<a class="reveal" style="--delay:140ms" href="https://www.instagram.com/ssajin_studio/p/DegvEKQAYMY/" target="_blank" rel="noopener noreferrer" aria-label="Open Ssajin Studio photo 5 on Instagram"><img alt="" decoding="async" width="512" height="683" loading="lazy" src="assets/photo-05.jpg"></a>
-<a class="reveal" style="--delay:175ms" href="https://www.instagram.com/ssajin_studio/p/Dd_VtSOAXgE/" target="_blank" rel="noopener noreferrer" aria-label="Open Ssajin Studio photo 6 on Instagram"><img alt="" decoding="async" width="512" height="683" loading="lazy" src="assets/photo-06.jpg"></a>
-<a class="reveal" style="--delay:0ms" href="https://www.instagram.com/ssajin_studio/p/DdylBgYgcrK/" target="_blank" rel="noopener noreferrer" aria-label="Open Ssajin Studio photo 7 on Instagram"><img alt="" decoding="async" width="512" height="683" loading="lazy" src="assets/photo-07.jpg"></a>
-<a class="reveal" style="--delay:35ms" href="https://www.instagram.com/ssajin_studio/p/DdJiUH7AV3Z/" target="_blank" rel="noopener noreferrer" aria-label="Open Ssajin Studio photo 8 on Instagram"><img alt="" decoding="async" width="512" height="683" loading="lazy" src="assets/photo-08.jpg"></a>
-<a class="reveal" style="--delay:70ms" href="https://www.instagram.com/ssajin_studio/p/Dc_E2g3Ae8I/" target="_blank" rel="noopener noreferrer" aria-label="Open Ssajin Studio photo 9 on Instagram"><img alt="" decoding="async" width="512" height="683" loading="lazy" src="assets/photo-09.jpg"></a>
-<a class="reveal" style="--delay:105ms" href="https://www.instagram.com/ssajin_studio/p/DQzFshUgRWU/" target="_blank" rel="noopener noreferrer" aria-label="Open Ssajin Studio photo 10 on Instagram"><img alt="" decoding="async" width="512" height="683" loading="lazy" src="assets/photo-10.jpg"></a>
-<a class="reveal" style="--delay:140ms" href="https://www.instagram.com/ssajin_studio/p/Dau-0ysAepp/" target="_blank" rel="noopener noreferrer" aria-label="Open Ssajin Studio photo 11 on Instagram"><img alt="" decoding="async" width="512" height="683" loading="lazy" src="assets/photo-11.jpg"></a>
-<a class="reveal" style="--delay:175ms" href="https://www.instagram.com/ssajin_studio/p/DRPSQwtgSvd/" target="_blank" rel="noopener noreferrer" aria-label="Open Ssajin Studio photo 12 on Instagram"><img alt="" decoding="async" width="512" height="683" loading="lazy" src="assets/photo-12.jpg"></a>
-<a class="reveal" style="--delay:0ms" href="https://www.instagram.com/ssajin_studio/p/DNVbZ22PSfs/" target="_blank" rel="noopener noreferrer" aria-label="Open Ssajin Studio photo 13 on Instagram"><img alt="" decoding="async" width="512" height="683" loading="lazy" src="assets/photo-13.jpg"></a>
-<a class="reveal" style="--delay:35ms" href="https://www.instagram.com/ssajin_studio/p/DbDrsWYgYK1/" target="_blank" rel="noopener noreferrer" aria-label="Open Ssajin Studio photo 14 on Instagram"><img alt="" decoding="async" width="512" height="683" loading="lazy" src="assets/photo-14.jpg"></a>
-<a class="reveal" style="--delay:70ms" href="https://www.instagram.com/ssajin_studio/p/DMprGK_v3u8/" target="_blank" rel="noopener noreferrer" aria-label="Open Ssajin Studio photo 15 on Instagram"><img alt="" decoding="async" width="512" height="683" loading="lazy" src="assets/photo-15.jpg"></a>
-<a class="reveal" style="--delay:105ms" href="https://www.instagram.com/ssajin_studio/p/DKen6KQp1RE/" target="_blank" rel="noopener noreferrer" aria-label="Open Ssajin Studio photo 16 on Instagram"><img alt="" decoding="async" width="512" height="683" loading="lazy" src="assets/photo-16.jpg"></a>
-<a class="reveal" style="--delay:140ms" href="https://www.instagram.com/ssajin_studio/p/DMDHMyLvKo0/" target="_blank" rel="noopener noreferrer" aria-label="Open Ssajin Studio photo 17 on Instagram"><img alt="" decoding="async" width="512" height="683" loading="lazy" src="assets/photo-17.jpg"></a>
-<a class="reveal" style="--delay:175ms" href="https://www.instagram.com/ssajin_studio/p/DId4iToPYzH/" target="_blank" rel="noopener noreferrer" aria-label="Open Ssajin Studio photo 18 on Instagram"><img alt="" decoding="async" width="512" height="683" loading="lazy" src="assets/photo-18.jpg"></a>
-<a class="reveal" style="--delay:0ms" href="https://www.instagram.com/ssajin_studio/p/DH55lo9PPE9/" target="_blank" rel="noopener noreferrer" aria-label="Open Ssajin Studio photo 19 on Instagram"><img alt="" decoding="async" width="512" height="683" loading="lazy" src="assets/photo-19.jpg"></a>
-<a class="reveal" style="--delay:35ms" href="https://www.instagram.com/ssajin_studio/p/DIYy0xdvWK9/" target="_blank" rel="noopener noreferrer" aria-label="Open Ssajin Studio photo 20 on Instagram"><img alt="" decoding="async" width="512" height="683" loading="lazy" src="assets/photo-20.jpg"></a>
-<a class="reveal" style="--delay:70ms" href="https://www.instagram.com/ssajin_studio/p/DHvZCPdvEHF/" target="_blank" rel="noopener noreferrer" aria-label="Open Ssajin Studio photo 21 on Instagram"><img alt="" decoding="async" width="512" height="683" loading="lazy" src="assets/photo-21.jpg"></a>
-<a class="reveal" style="--delay:105ms" href="https://www.instagram.com/ssajin_studio/p/DHlOOKTvKfw/" target="_blank" rel="noopener noreferrer" aria-label="Open Ssajin Studio photo 22 on Instagram"><img alt="" decoding="async" width="512" height="683" loading="lazy" src="assets/photo-22.jpg"></a>
-<a class="reveal" style="--delay:140ms" href="https://www.instagram.com/ssajin_studio/p/DHBLw6Mvq1M/" target="_blank" rel="noopener noreferrer" aria-label="Open Ssajin Studio photo 23 on Instagram"><img alt="" decoding="async" width="512" height="683" loading="lazy" src="assets/photo-23.jpg"></a>
-<a class="reveal" style="--delay:175ms" href="https://www.instagram.com/ssajin_studio/p/DF-RjRcPK7B/" target="_blank" rel="noopener noreferrer" aria-label="Open Ssajin Studio photo 24 on Instagram"><img alt="" decoding="async" width="512" height="683" loading="lazy" src="assets/photo-24.jpg"></a></div></section>
-</main><dialog class="gallery-viewer" aria-labelledby="viewer-title">
-  <div class="viewer-bar"><span class="meta" id="viewer-title">Ssajin Studio photography</span><button class="viewer-control viewer-close" type="button" aria-label="Close photograph" autofocus>✕</button></div>
-  <figure class="viewer-figure"><img draggable="false" alt=""></figure>
-  <div class="viewer-bar"><span class="viewer-count meta" aria-live="polite"></span><a class="viewer-source meta" target="_blank" rel="noopener noreferrer">Original post ↗</a><div class="viewer-controls"><button class="viewer-control viewer-prev" type="button" aria-label="Previous photograph">←</button><button class="viewer-control viewer-next" type="button" aria-label="Next photograph">→</button></div></div>
-</dialog>
-<footer id="contact"><div class="meta reveal">Project inquiries</div><div class="footerbody"><h2 class="reveal">Let’s build<br><em class="kinetic">something.</em></h2><a class="pill meta" href="https://www.instagram.com/ssajin_studio/" target="_blank" rel="noopener noreferrer">Contact on Instagram <span aria-hidden="true">↗</span></a></div><div class="footerline meta"><span>Ssajin Studio</span><a href="#top">Back to top ↑</a></div></footer>
-<script>
-const $ = selector => document.querySelector(selector);
-const $$ = selector => [...document.querySelectorAll(selector)];
-const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
-const reduce = window.studioMotionQuery();
-const desktop = matchMedia('(min-width: 851px) and (min-height: 650px)');
-const work = $('.work');
-const track = $('.track');
-const cards = $$('.concept');
-const [previous, next] = $$('.railbuttons button');
-const hero = $('.hero');
-const photograph = $('.heroArt');
-let pinned, stops, distance, active = 0, frame = 0;
-document.documentElement.classList.add('js');
-const reveal = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) return;
-    entry.target.classList.add('in');
-    reveal.unobserve(entry.target);
-  });
-}, {threshold:.09});
-$$('.reveal').forEach(element => reveal.observe(element));
-function measure() {
-  pinned = desktop.matches && !reduce.matches;
-  work.classList.toggle('pinned', pinned);
-  distance = Math.max(0, track.scrollWidth - work.clientWidth);
-  stops = cards.map(card => clamp(card.offsetLeft - cards[0].offsetLeft, 0, distance));
-  work.style.height = pinned ? innerHeight + distance + 'px' : '';
-  if (pinned) track.scrollLeft = 0;
-  else {
-    track.style.transform = '';
-    cards.forEach(card => {
-      ['--drift', '--caption-shift', '--yaw', '--panel-scale'].forEach(name => card.style.removeProperty(name));
-    });
-  }
-  tick();
-}
-function paint() {
-  frame = 0;
-  const top = work.getBoundingClientRect().top;
-  const position = pinned ? clamp(-top, 0, distance) : track.scrollLeft;
-  if (pinned) {
-    track.style.transform = 'translate3d(' + -position + 'px,0,0)';
-    cards.forEach((card, index) => {
-      const offset = clamp((position - stops[index]) / work.clientWidth, -1, 1);
-      card.style.setProperty('--drift', offset * 20 + 'px');
-      card.style.setProperty('--caption-shift', offset * 40 + 'px');
-      card.style.setProperty('--yaw', offset * -9 + 'deg');
-      card.style.setProperty('--panel-scale', 1 - Math.abs(offset) * .055);
-    });
-  }
-  active = stops.reduce((nearest, stop, index) => Math.abs(stop-position) < Math.abs(stops[nearest]-position) ? index : nearest, 0);
-  previous.disabled = active === 0;
-  next.disabled = active === cards.length - 1;
-  $('.railcount').textContent = '0' + (active + 1) + ' / 0' + cards.length;
-  $('.meter span').style.transform = 'scaleX(' + (.06 + .94 * position / (distance || 1)) + ')';
-  $('.progress').style.transform = 'scaleX(' + scrollY / Math.max(1, document.documentElement.scrollHeight-innerHeight) + ')';
-  if (!reduce.matches && hero.getBoundingClientRect().bottom > 0) photograph.style.setProperty('--sy', clamp(scrollY * .11,0,65) + 'px');
-}
-function tick() {
-  if (!frame) frame = requestAnimationFrame(paint);
-}
-function go(index) {
-  const target = stops[clamp(index,0,cards.length-1)];
-  const behavior = reduce.matches ? 'instant' : 'smooth';
-  if (pinned) scrollTo({top:scrollY + work.getBoundingClientRect().top + target,behavior});
-  else track.scrollTo({left:target,behavior});
-}
-previous.addEventListener('click', () => go(active-1));
-next.addEventListener('click', () => go(active+1));
-track.addEventListener('keydown', event => {
-  const direction = {'ArrowLeft':-1,'ArrowRight':1}[event.key];
-  if (!direction) return;
-  event.preventDefault();
-  go(active + direction);
-});
-addEventListener('scroll',tick,{passive:true});
-track.addEventListener('scroll',tick,{passive:true});
-addEventListener('resize',measure);
-reduce.addEventListener('change',measure);
-desktop.addEventListener('change',measure);
-hero.addEventListener('pointermove',event => {
-  if (reduce.matches || event.pointerType !== 'mouse') return;
-  const box = hero.getBoundingClientRect();
-  photograph.style.setProperty('--px',((event.clientX-box.left)/box.width-.5)*21+'px');
-  photograph.style.setProperty('--py',((event.clientY-box.top)/box.height-.5)*19+'px');
-});
-hero.addEventListener('pointerleave',() => {
-  photograph.style.removeProperty('--px');
-  photograph.style.removeProperty('--py');
-});
-measure();
-</script><script>
-{
-  const gallery = document.querySelector('.archive-grid');
-  const viewer = document.querySelector('.gallery-viewer');
-  if (typeof viewer.showModal === 'function') {
-    const photos = [...gallery.querySelectorAll('a')];
-    const picture = viewer.querySelector('img');
-    const frame = viewer.querySelector('figure');
-    const count = viewer.querySelector('.viewer-count');
-    const source = viewer.querySelector('.viewer-source');
-    const reduced = window.studioMotionQuery();
-    let selected = 0;
-    let opener;
-    let startX;
-    let animation;
-    function display(index, direction = 0) {
-      selected = (index + photos.length) % photos.length;
-      const item = photos[selected];
-      picture.src = item.querySelector('img').src;
-      picture.alt = 'Documentary photography by Kekhriezalie Keretsu';
-      count.textContent = String(selected + 1).padStart(2, '0') + ' / ' + photos.length;
-      source.href = item.href;
-      animation?.cancel();
-      if (direction && !reduced.matches) {
-        animation = picture.animate([
-          {opacity:.15, transform:'translateX(' + direction * 9 + '%) scale(1.055)'},
-          {opacity:1, transform:'none'}
-        ], {duration:490,easing:'cubic-bezier(.2,.72,.22,1)'});
-      }
-    }
-    photos.forEach((item, index) => {
-      item.setAttribute('aria-haspopup','dialog');
-      item.setAttribute('aria-label','View Ssajin Studio photograph ' + (index + 1));
-      item.addEventListener('click', event => {
-        if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-        event.preventDefault();
-        opener = item;
-        display(index);
-        viewer.showModal();
-      });
-    });
-    viewer.querySelector('.viewer-close').addEventListener('click', () => viewer.close());
-    viewer.querySelector('.viewer-prev').addEventListener('click', () => display(selected - 1, -1));
-    viewer.querySelector('.viewer-next').addEventListener('click', () => display(selected + 1, 1));
-    viewer.addEventListener('close', () => {animation?.cancel(); opener?.focus({preventScroll:true});});
-    viewer.addEventListener('keydown', event => {
-      const direction = {ArrowLeft:-1,ArrowRight:1}[event.key];
-      if (!direction) return;
-      event.preventDefault();
-      display(selected + direction, direction);
-    });
-    frame.addEventListener('touchstart', event => {startX = event.changedTouches[0].clientX;}, {passive:true});
-    frame.addEventListener('touchend', event => {
-      const delta = event.changedTouches[0].clientX - startX;
-      if (Math.abs(delta) < 46) return;
-      const direction = delta < 0 ? 1 : -1;
-      display(selected + direction, direction);
-    }, {passive:true});
-  }
-}
-</script><script>
-{
-const reduced=window.studioMotionQuery();
-const film=document.querySelector('.motion-film'),strip=document.querySelector('.film-strip');
-const headings=[...document.querySelectorAll('.section-title,.footerbody h2')];
-const tiles=[...document.querySelectorAll('.archive-grid a')];
-const heroTitle=document.querySelector('.intro');
-const serviceRows=[...document.querySelectorAll('.services details')];
-const clamp=x=>Math.max(0,Math.min(1,x));
-let pending=false;
-function draw(){
- pending=false;
- if(reduced.matches)return;
- const h=innerHeight;
- const r=film.getBoundingClientRect();
- const p=clamp(-r.top/(film.offsetHeight-h));
- strip.style.transform='translate3d('+(-p*Math.max(0,strip.scrollWidth-innerWidth))+'px,0,0)';
- document.querySelector('.film-title').style.transform='translateX('+(-p*20)+'px)';
- headings.forEach(el=>{const r=el.getBoundingClientRect();const p=clamp((h-r.top)/(h*.8));el.style.transform='translateY('+((1-p)*85)+'px) rotate('+((1-p)*3)+'deg)';el.style.opacity=.2+.8*p;});
- serviceRows.forEach((el,i)=>{const r=el.getBoundingClientRect();const p=clamp((h-r.top)/(h*.45));el.style.transform='translateX('+((1-p)*(i%2?100:-100))+'px)';el.style.opacity=.15+.85*p;});
- tiles.forEach((el,i)=>{const r=el.getBoundingClientRect();if(r.top>h+150||r.bottom< -150)return;const p=clamp((h-r.top)/(h*.6));el.style.translate='0 '+((1-p)*110)+'px';el.style.rotate=((1-p)*(i%2?8:-8))+'deg';});
- if(scrollY<h)heroTitle.style.translate=(-scrollY*.08)+'px '+(-scrollY*.12)+'px';
-}
-function schedule(){if(!pending){pending=true;requestAnimationFrame(draw)}}
-document.documentElement.classList.add('motion-on');
-addEventListener('scroll',schedule,{passive:true});addEventListener('resize',schedule);
-reduced.addEventListener('change',()=>{if(reduced.matches){[strip,...headings,...serviceRows,...tiles,heroTitle,document.querySelector('.film-title')].forEach(e=>{e.style.transform='';e.style.translate='';e.style.rotate='';e.style.opacity='';});}else schedule()});
-schedule();
-}
-</script><style>.motion-switch{position:fixed;right:18px;bottom:18px;z-index:40;border:1px solid #f3ede3;background:#9f2029;color:#fff;padding:13px 18px;border-radius:50px}.film-strip{scrollbar-width:none}.film-strip::-webkit-scrollbar{display:none}</style><script>
-const motionSwitch=document.querySelector('.motion-switch');
-motionSwitch.textContent=window.studioMotionReduced?'Enable full motion':'Reduce motion';
-motionSwitch.addEventListener('click',()=>{sessionStorage.setItem('ssajin-motion',window.studioMotionReduced?'full':'reduced');location.reload()});
-if(sessionStorage.getItem('ssajin-motion')==='full'){
- for(const sheet of document.styleSheets){for(const rule of sheet.cssRules){if(rule.type===CSSRule.MEDIA_RULE&&/prefers-reduced-motion:\s*reduce/.test(rule.conditionText))rule.media.mediaText='(max-width:0px)';if(rule.type===CSSRule.MEDIA_RULE&&/prefers-reduced-motion:\s*no-preference/.test(rule.conditionText))rule.media.mediaText='all';}}
- measure();
-}
-</script><script>
-{
-const section=document.querySelector('.contact-sheet'),title=section.querySelector('.sheet-title');
-const photos=[...section.querySelectorAll('figure')],extras=[...document.querySelectorAll('.hero-extra')];
-const hero=document.querySelector('.hero'),heroImage=document.querySelector('.heroArt');
-const limit=(n,a=0,b=1)=>Math.max(a,Math.min(b,n));
-let queued=false;
-function render(){
- queued=false;
- if(window.studioMotionReduced)return;
- const rect=section.getBoundingClientRect(),range=section.offsetHeight-innerHeight;
- const progress=limit(-rect.top/Math.max(1,range));
- photos.forEach((photo,i)=>{
- const spread=1-progress;
- const side=i%2?1:-1;
- photo.style.transform='translate3d('+side*spread*(90+i*10)+'vw,'+spread*(i<4?-70:70)+'vh,'+(spread*-500)+'px) rotate('+side*spread*35+'deg) scale('+(0.75+progress*.25)+')';
  });
- title.style.transform='scale('+(1+progress*.65)+')';
- title.style.opacity=1-limit((progress-.35)/.4);
- const heroProgress=limit(-hero.getBoundingClientRect().top/hero.offsetHeight);
- extras.forEach((photo,i)=>{photo.style.translate=(i%2?1:-1)*heroProgress*120+'px '+(-heroProgress*(120+i*55))+'px';photo.style.scale=1+heroProgress*.2;});
- heroImage.style.translate=heroProgress*70+'px '+heroProgress*50+'px';
 }
-function queue(){if(!queued){queued=true;requestAnimationFrame(render)}}
-addEventListener('scroll',queue,{passive:true});addEventListener('resize',queue);queue();
-document.querySelectorAll('.pill').forEach(button=>{
- button.addEventListener('pointermove',e=>{
- if(window.studioMotionReduced||e.pointerType!=='mouse')return;
- const box=button.getBoundingClientRect();
- button.style.transform='translate('+limit((e.clientX-box.left-box.width/2)*.15,-9,9)+'px,'+limit((e.clientY-box.top-box.height/2)*.2,-7,7)+'px)';
- });
- button.addEventListener('pointerleave',()=>button.style.transform='');
+setupMotion();
+motionButton.addEventListener('click',()=>{fullMotion=!fullMotion;savedMotion=fullMotion?'full':'reduced';try{localStorage.setItem('ssajin-motion',savedMotion)}catch{}setupMotion();});
+preference.addEventListener('change',()=>{if(!savedMotion){fullMotion=!preference.matches;setupMotion();}});
+let resizeTimer,wide=innerWidth>850&&innerHeight>650;
+addEventListener('resize',()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(()=>{const now=innerWidth>850&&innerHeight>650;if(now!==wide){wide=now;setupMotion()}else window.ScrollTrigger?.refresh()},180)});
+function storyStep(direction){
+ const left=railTrigger?railTrigger.progress*(track.scrollWidth-innerWidth):track.scrollLeft;
+ const positions=cards.map(card=>card.offsetLeft-cards[0].offsetLeft);
+ let index=positions.reduce((best,p,i)=>Math.abs(p-left)<Math.abs(positions[best]-left)?i:best,0);
+ index=Math.max(0,Math.min(cards.length-1,index+direction));
+ const max=railTrigger?track.scrollWidth-innerWidth:track.scrollWidth-track.clientWidth;
+ const target=Math.min(max,positions[index]);
+ if(railTrigger)scrollTo({top:railTrigger.start+target,behavior:fullMotion?'smooth':'instant'});
+ else track.scrollTo({left:target,behavior:fullMotion?'smooth':'instant'});
+}
+$('.previous-story').addEventListener('click',()=>storyStep(-1));$('.next-story').addEventListener('click',()=>storyStep(1));
+track.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();storyStep(e.key==='ArrowRight'?1:-1)}});
+track.addEventListener('scroll',()=>{if(!railTrigger)$('.story-progress span').style.transform='scaleX('+(.05+.95*track.scrollLeft/Math.max(1,track.scrollWidth-track.clientWidth))+')'},{passive:true});
+const menu=$('.menu-panel'),menuButton=$('.menu-toggle');
+function closeMenu(){menu.classList.remove('open');menu.inert=true;document.body.classList.remove('locked');menuButton.setAttribute('aria-expanded','false');menuButton.focus();}
+menuButton.addEventListener('click',()=>{menu.classList.add('open');menu.inert=false;document.body.classList.add('locked');menuButton.setAttribute('aria-expanded','true');$('.menu-close').focus()});
+$('.menu-close').addEventListener('click',closeMenu);$$('.menu-panel a').forEach(a=>a.addEventListener('click',closeMenu));
+menu.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu();if(e.key==='Tab'){const links=[...menu.querySelectorAll('button,a')];const first=links[0],last=links.at(-1);if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}});
+const viewer=$('.viewer'),picture=$('.viewer-frame img');let selected=0,opener,animation,startX;
+function displayPhoto(index,direction=0){
+ selected=(index+24)%24;picture.src='assets/photo-'+String(selected+1).padStart(2,'0')+'.jpg';
+ $('.viewer-count').textContent=String(selected+1).padStart(2,'0')+' / 24';$('.viewer-source').href='https://www.instagram.com/ssajin_studio/p/'+posts[selected]+'/';
+ animation?.cancel();if(fullMotion&&direction)animation=picture.animate([{opacity:0,transform:'translateX('+direction*45+'px)'},{opacity:1,transform:'none'}],{duration:450,easing:'cubic-bezier(.2,.7,.2,1)'});
+}
+$$('[data-photo]').forEach(button=>button.addEventListener('click',()=>{opener=button;displayPhoto(Number(button.dataset.photo)-1);viewer.showModal();document.body.classList.add('locked')}));
+$('.dialog-close').addEventListener('click',()=>viewer.close());viewer.addEventListener('close',()=>{document.body.classList.remove('locked');animation?.cancel();opener?.focus({preventScroll:true})});
+$$('[data-step]').forEach(button=>button.addEventListener('click',()=>displayPhoto(selected+Number(button.dataset.step),Number(button.dataset.step))));
+viewer.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();const d=e.key==='ArrowRight'?1:-1;displayPhoto(selected+d,d)}});
+$('.viewer-frame').addEventListener('touchstart',e=>startX=e.changedTouches[0].clientX,{passive:true});
+$('.viewer-frame').addEventListener('touchend',e=>{const delta=e.changedTouches[0].clientX-startX;if(Math.abs(delta)>50)displayPhoto(selected+(delta<0?1:-1),delta<0?1:-1)},{passive:true});
+const cursor=$('.cursor-label');
+$$('[data-photo]').forEach(button=>{
+ button.addEventListener('pointermove',e=>{if(e.pointerType!=='mouse'||!fullMotion)return;cursor.style.opacity=1;cursor.style.transform='translate('+(e.clientX-38)+'px,'+(e.clientY-38)+'px)'});
+ button.addEventListener('pointerleave',()=>cursor.style.opacity=0);
+ button.addEventListener('click',()=>cursor.style.opacity=0);
 });
-}
-</script></html>
+addEventListener('load',()=>window.ScrollTrigger?.refresh());
+</script></body></html>
